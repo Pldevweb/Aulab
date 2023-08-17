@@ -12,10 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('partenaires', function (Blueprint $table) {
-            $table->id('id', 11);
+            $table->id();
             $table->string('nom', 100);
             $table->string('logo', 200);
-            $table->image('image', 200);
             $table->timestamps();
         });
     }

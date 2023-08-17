@@ -17,7 +17,6 @@ return new class extends Migration
             $table->datetime('date_commande');
             $table->decimal('montant_total', 10, 2);
             $table->string('statut', 50);
-            // $table->string('session_id', 255);
             $table->timestamps();
         });
     }
