@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('lignes_commandes', function (Blueprint $table) {
+        Schema::create('commandes_ligne', function (Blueprint $table) {
             $table->id();
-            $table->integer('quantite', 11);
+            $table->integer('quantite');
             $table->timestamps();
         });
     }
