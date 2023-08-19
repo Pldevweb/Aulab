@@ -96,3 +96,4 @@
         {{ $slot }}
     @endisset
 @endsection
+
