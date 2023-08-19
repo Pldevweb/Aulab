@@ -10,3 +10,8 @@
 - Modification de la table users pour ajouter : address, city, zipcode, country et profile_photo.
 =======
 
+## 19 Août 2023
+
+- composer update
+- layout.app.blade commencé
+  
