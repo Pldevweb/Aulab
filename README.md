@@ -13,9 +13,9 @@
 ## 19 Août 2023
 ### V 1.0
 
-- composer update
+- Composer update
 - layout.app.blade commencé
     - routing
-    - views
     - navbar
+-views
   
