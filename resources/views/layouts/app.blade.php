@@ -3,13 +3,13 @@
 
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
         <div class="w-full flex flex-wrap items-center justify-center mx-auto p-2 bg-[#5e5e4a]" id="navbar-user">
-            <a href="https://flowbite.com/" class="flex items-center">
+            <a href="" class="flex items-center">
                 <p class="text-white text-center">OFFRE EN COURS ICI</p>
             </a>   
         </div>
         
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" class="flex items-center">
+        <a href="{{ url('/') }}" class="flex items-center">
             <img src="{{ asset('storage/images/SANS NOM.webp') }}" class="h-18 mr-3" alt="Flowbite Logo" />
         </a>
         <form class="flex items-center">   
