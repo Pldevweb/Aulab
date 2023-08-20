@@ -14,4 +14,6 @@
 
 - composer update
 - layout.app.blade commencé
+    - routing
+    - views
   
