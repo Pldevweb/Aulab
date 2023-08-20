@@ -66,22 +66,22 @@
       <div class="w-full flex flex-wrap items-center justify-between mx-auto p-2 bg-[a4a4a4]" id="navbar-user">
         <ul class="mx-auto flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-                <a href="#" class="block py-2 pl-3 pr-4 text-xl text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">ACCUEIL</a>
+                <a href="{{ url('/') }}" class="block py-2 pl-3 pr-4 text-xl text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">ACCUEIL</a>
               </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-xl text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">BOUTIQUE</a>
+            <a href="{{ url('/products') }}" class="block py-2 pl-3 pr-4 text-xl text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">BOUTIQUE</a>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-xl text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">PARTENAIRE</a>
+            <a href="{{ url('/partners') }}" class="block py-2 pl-3 pr-4 text-xl text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">PARTENAIRE</a>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-xl text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">BLOG</a>
+            <a href="{{ url('/blog') }}" class="block py-2 pl-3 pr-4 text-xl text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">BLOG</a>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-xl text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">À PROPOS D'AULAB</a>
+            <a href="{{ url('/about') }}" class="block py-2 pl-3 pr-4 text-xl text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">À PROPOS D'AULAB</a>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-xl text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">NOUS CONTACTER</a>
+            <a href="{{ url('/contact') }}" class="block py-2 pl-3 pr-4 text-xl text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">NOUS CONTACTER</a>
           </li>
         </ul>
       </div>
