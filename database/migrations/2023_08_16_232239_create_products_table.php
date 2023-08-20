@@ -11,21 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('commandes', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('numero_commande', 20)->unique();
-            $table->datetime('date_commande');
-            $table->decimal('montant_total', 10, 2);
-            $table->string('statut', 50);
+            $table->string('name', 100);
+            $table->text('description')->nullable();
+            $table->decimal('price', 10, 2);
+            $table->integer('discount')->nullable();
+            $table->string('image', 200);
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('commandes');
+        Schema::dropIfExists('produits');
     }
 };

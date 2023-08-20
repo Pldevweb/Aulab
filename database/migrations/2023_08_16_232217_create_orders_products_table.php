@@ -11,16 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categories_produits', function (Blueprint $table) {
+        Schema::create('orders_products', function (Blueprint $table) {
+            $table->id();
+            $table->integer('quantity');
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('categorie_produit');
+        Schema::dropIfExists('commandes_lignes');
     }
 };

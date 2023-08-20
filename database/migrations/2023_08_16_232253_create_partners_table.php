@@ -11,18 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('commandes_ligne', function (Blueprint $table) {
+        Schema::create('partners', function (Blueprint $table) {
             $table->id();
-            $table->integer('quantite');
+            $table->string('name', 100);
+            $table->string('logo', 200);
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('commandes_lignes');
+        Schema::dropIfExists('partenaires');
     }
 };

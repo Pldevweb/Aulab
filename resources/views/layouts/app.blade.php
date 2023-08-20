@@ -87,7 +87,7 @@
       </div>
       </nav>
       
-      
+
 </head>
 @section('body')
     @yield('content')
@@ -96,4 +96,3 @@
         {{ $slot }}
     @endisset
 @endsection
-
