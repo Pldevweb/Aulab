@@ -16,5 +16,4 @@
 - layout.app.blade commencé
     - routing
     - navbar
--views
-  
+-Views  
