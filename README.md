@@ -1,5 +1,14 @@
 # Aulab
 
+### CLI utile
+
+- git clone -b Phase-de-test-1 https://github.com/Pldevweb/Aulab.git
+- git clone -b Danyka https://github.com/Pldevweb/Aulab.git
+- git clone -b Pier-Luc https://github.com/Pldevweb/Aulab.git
+- git clone -b main https://github.com/Pldevweb/Aulab.git
+
+---
+
 ## 18 Août 2023
 - Installation de TALL Stack avec authentification :
     - composer require livewire/livewire laravel-frontend-presets/tall
@@ -12,12 +21,11 @@
 ---
 
 ## 19 Août 2023
-### V 1.0
+### V 1.0 
 
 - Composer update
 - layout.app.blade commencé
     - routing
     - navbar
 - Views  
-
 ---
