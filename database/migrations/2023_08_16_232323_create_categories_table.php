@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('commandes_ligne', function (Blueprint $table) {
-            $table->id();
-            $table->integer('quantite');
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id('id');
+            $table->string('name', 100);
             $table->timestamps();
         });
     }
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('commandes_lignes');
+        Schema::dropIfExists('categories');
     }
 };
