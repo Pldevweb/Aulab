@@ -22,7 +22,7 @@
 
 ## 19 Août 2023
 ### V 1.0 
-- Branch merge into phase-de-test-1
+
 - Composer update
 - layout.app.blade commencé
     - routing
