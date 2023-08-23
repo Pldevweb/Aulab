@@ -16,6 +16,8 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
+        <script src="https://kit.fontawesome.com/dc01c8dc70.js" crossorigin="anonymous"></script>
+
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @livewireStyles
         @livewireScripts
