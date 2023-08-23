@@ -23,19 +23,6 @@
                 </form>
             </div>
             <div class="flex justify-end w-1/3 px-10">
-        {{-- @guest
-            @if (Route::has('login'))
-                <li>
-                    <a href="{{ route('login') }}">{{ __('messages.Login') }}</a>
-                </li>
-            @endif
-
-            @if (Route::has('register'))
-                <li>
-                    <a href="{{ route('register') }}">{{ __('messages.Register') }}</a>
-                </li>
-            @endif
-            @else --}}
             @guest
             @if (Route::has('login'))
             <div x-data="{dropdownMenu: false}" class="relative" @click.away="dropdownMenu = false">
@@ -86,24 +73,6 @@
                 </div>
             </template>
             </div>
-
-            {{-- <li>
-                <a href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }}
-                </a>
-
-                <div>
-                    <a href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                     document.getElementById('logout-form').submit();">
-                        {{ __('messages.Logout') }}
-                    </a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </div>
-            </li> --}}
         @endguest
             </div>
         </div>
