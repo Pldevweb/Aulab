@@ -23,29 +23,14 @@
                 </form>
             </div>
             <div class="flex justify-end w-1/3 px-10">
-        {{-- @guest
-            @if (Route::has('login'))
-                <li>
-                    <a href="{{ route('login') }}">{{ __('messages.Login') }}</a>
-                </li>
-            @endif
-
-            @if (Route::has('register'))
-                <li>
-                    <a href="{{ route('register') }}">{{ __('messages.Register') }}</a>
-                </li>
-            @endif
-            @else --}}
             @guest
             @if (Route::has('login'))
             <div x-data="{dropdownMenu: false}" class="relative" @click.away="dropdownMenu = false">
-                <!-- Dropdown toggle button -->
-                <button @click="dropdownMenu = ! dropdownMenu" class="flex justify-end items-end p-2 bg-white bg-gray-100 rounded-md">
+                <button @click="dropdownMenu = ! dropdownMenu" class="flex justify-end items-end p-2 bg-white bg-gray-100 rounded-md focus:outline-none">
                     <span class="bg-[#5e5e4a] p-1 h-8 w-8 rounded-full">
                         <i class="fa-solid fa-user text-white"></i>
                     </span>
                 </button>
-                <!-- Dropdown list -->
                 <template x-if="true">
                 <div x-show="dropdownMenu" class="absolute right-0 py-2 mt-2 bg-white bg-gray-100 rounded-md shadow-xl w-44">
                     <a href="{{ route('login') }}" class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -62,17 +47,23 @@
                     @endif
                     @else
             <div x-data="{dropdownMenu: false}" class="relative" @click.away="dropdownMenu = false">
-                <!-- Dropdown toggle button -->
-                <button @click="dropdownMenu = ! dropdownMenu" class="flex justify-end items-end p-2 bg-white bg-gray-100 rounded-md">
+                <button @click="dropdownMenu = ! dropdownMenu" class="flex justify-end items-end p-2 bg-white bg-gray-100 rounded-md focus:outline-none hover:opacity-90 opacity-100">
+                    @if(Auth::user()->profile_photo)
+                        <img src="{{ asset(Auth::user()->profile_photo) }}" alt="Profile Photo" class="p-1 h-10 w-10 rounded-full object-cover">
+                    @else
                     <span class="bg-[#5e5e4a] p-1 h-8 w-8 rounded-full">
                         <i class="fa-solid fa-user text-white"></i>
                     </span>
+                    @endif
+
                 </button>
-                <!-- Dropdown list -->
                 <template x-if="true">
                 <div x-show="dropdownMenu" class="absolute right-0 py-2 mt-2 bg-white bg-gray-100 rounded-md shadow-xl w-44">
+                    <div class="block px-4 py-2 text-sm text-center">
+                        Bienvenue {{ Auth::user()->name }} !
+                    </div>
                     <a href="#" class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }}
+                        Éditer mon profil
                     </a>
                     <a href="{{ route('logout') }}"
                     onclick="event.preventDefault();
@@ -85,36 +76,6 @@
                     </form>
                 </div>
             </template>
-            </div>
-
-            {{-- <li>
-                <a href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }}
-            @else
-            <div x-data="{ dropdownMenu: false }" @click.away="dropdownMenu = false" class="relative">
-                <button @click="dropdownMenu = !dropdownMenu" class="flex justify-end items-end p-2 bg-white bg-gray-100 rounded-md">
-                    <span class="bg-[#5e5e4a] p-1 h-8 w-8 rounded-full">
-                    <i class="fa-solid fa-user text-white"></i>
-                    </span>
-                </button>
-                <template x-if="true">
-                <div x-show="dropdownMenu" class="absolute right-0 py-2 mt-2 bg-white bg-gray-100 rounded-md shadow-xl w-44">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
-                {{ Auth::user()->name }}
-                </a>
-                <a href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();" class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
-                {{ __('messages.Logout') }}
-                </a>
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-                </form>
-                </div>
-                </template>
-            </div>
-
             </div>
         @endguest
             </div>
