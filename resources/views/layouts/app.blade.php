@@ -8,11 +8,17 @@
 @extends('layouts.base')
 </head>
 <body>
-    @include('layouts.header')
-    @yield('content')
-
+    <header>
+        <x-header />
+    </header>
+    <main class="min-h-screen">
+        @yield('content')
+    </main>
     @isset($slot)
         {{ $slot }}
     @endisset
+    <footer class="relative bottom-0">
+        <x-footer />
+    </footer>
 </body>
 </html>
