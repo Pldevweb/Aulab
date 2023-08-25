@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\EmailVerificationController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Models\User;
+use App\Models\Categorie;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Auth\Passwords\Confirm;
 use App\Http\Livewire\Auth\Passwords\Email;
@@ -22,8 +23,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'home')
-    ->name('home');
+Route::get('/', function(){
+    return view('home', ['categories' => Categorie::get()]);
+});
 
 Route::view('about', 'about')
     ->name('about');
