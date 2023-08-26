@@ -23,8 +23,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function(){
+//     return view('home', ['categories' => Categorie::get()]);
+// });
 Route::get('/', function(){
-    return view('home', ['categories' => Categorie::get()]);
+    return view('home');
 });
 
 Route::view('about', 'about')

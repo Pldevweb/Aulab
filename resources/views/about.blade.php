@@ -32,7 +32,7 @@
                         <p class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Jeanne
                             St-Jean</p>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center">Fusce non gravida arcu, et
+                    <p class="mb-3 font-normal text-gray-700">Fusce non gravida arcu, et
                         ultricies lacus. Phasellus porttitor mauris quis lorem maximus, eget tincidunt dui vestibulum. Cras
                         tempor, tellus in molestie luctus, metus nisl vulputate lorem, a lobortis lorem lorem eget augue.
                         Proin dignissim sem turpis, nec egestas turpis imperdiet id. Proin egestas ac sapien sed cursus. Nam
