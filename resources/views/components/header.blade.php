@@ -1,7 +1,7 @@
 <div>
     <div class="w-full flex items-center justify-center bg-[#5e5e4a] font-sans h-7 p-2" id="navbar-user">
-        <a href="" class="text-white text-center font-sans text-xs">
-            OFFRE EN COURS ICI
+        <a href="" class="text-white text-center font-sans text-xs uppercase">
+            {{ __('messages.Offres') }}
         </a>
     </div>
     <div class="min-w-full flex items-center justify-center">
@@ -71,12 +71,12 @@
                 <div x-show="dropdownMenu"
                     class="absolute right-0 py-2 mt-2 bg-white bg-gray-100 rounded-md shadow-xl w-44">
                     <div class="block px-4 py-2 text-sm text-center">
-                        Bienvenue {{ Auth::user()->name }} !
+                        {{ __('messages.Bienvenue') }} {{ Auth::user()->name }} !
                     </div>
                     <a href="#"
                         class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white"
                         role="button" aria-haspopup="true" aria-expanded="false" v-pre>
-                        Éditer mon profil
+                        {{ __('messages.Editer_mon_profil') }}
                     </a>
                     <a href="{{ route('logout') }}"
                         onclick="event.preventDefault();
@@ -99,29 +99,39 @@
         class="mx-auto flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 text-sm">
         <li>
             <a href="{{ url('/') }}"
-                class="block py-2 pl-3 pr-4 text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-sans text-sm font-semibold uppercase">Accueil</a>
+                class="block py-2 pl-3 pr-4 text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-sans text-sm font-semibold uppercase">
+                {{ __('messages.Accueil') }}
+            </a>
         </li>
         <li>
             <a href="{{ url('/products') }}"
-                class="block py-2 pl-3 pr-4 text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-sans text-sm font-semibold uppercase">Boutique</a>
+                class="block py-2 pl-3 pr-4 text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-sans text-sm font-semibold uppercase">
+                {{ __('messages.Boutique') }}
+            </a>
         </li>
         <li>
             <a href="{{ url('/partners') }}"
-                class="block py-2 pl-3 pr-4 text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-sans text-sm font-semibold uppercase">Partenaire</a>
+                class="block py-2 pl-3 pr-4 text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-sans text-sm font-semibold uppercase">
+                {{ __('messages.Partenaire') }}
+            </a>
         </li>
         <li>
             <a href="{{ url('/blog') }}"
-                class="block py-2 pl-3 pr-4 text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-sans text-sm font-semibold uppercase">Blog</a>
+                class="block py-2 pl-3 pr-4 text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-sans text-sm font-semibold uppercase">
+                {{ __('messages.Blog') }}
+            </a>
         </li>
         <li>
             <a href="{{ url('/about') }}"
-                class="block py-2 pl-3 pr-4 text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-sans text-sm font-semibold uppercase">À
-                propos D'Aulab</a>
+                class="block py-2 pl-3 pr-4 text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-sans text-sm font-semibold uppercase">
+                {{ __('messages.A_propos_dAulab') }}
+            </a>
         </li>
         <li>
             <a href="{{ url('/contact') }}"
-                class="block py-2 pl-3 pr-4 text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-sans text-sm font-semibold uppercase">Nous
-                connecter</a>
+                class="block py-2 pl-3 pr-4 text-[#5e5e4a] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-sans text-sm font-semibold uppercase">
+                {{ __('messages.Nous_contacter') }}
+            </a>
         </li>
     </ul>
 </nav>

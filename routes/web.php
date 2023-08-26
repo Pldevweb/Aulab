@@ -39,7 +39,7 @@ Route::view('contact', 'contact')
 
 Route::resource('products', ProductController::class);
 
-Route::view('partners', 'partners')
+Route::view('partners', 'partners', ['categories' => Categorie::get()])
     ->name('partners');
 
 Route::middleware('guest')->group(function () {
