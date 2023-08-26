@@ -36,7 +36,4 @@
 - Various bug fix
     - now running command php artisans migrate --seed  will automatically migrate and seed database with fake data
     - component footer categories correctly display accross all views
-
-- Views
-    - about done (lorem ipsum)
 ---
