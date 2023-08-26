@@ -7,25 +7,26 @@
                 <div class="w-5/6 h-3/4 mt-8 mb-0 bg-white relative bg-cover bg-center"
                     style="background-image: url(https://hips.hearstapps.com/hmg-prod/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=1.00xw:0.756xh;0,0.0756xh&resize=1200:*)">
                     <h1 class="absolute top-0 right-0 p-4 text-3xl mr-4 text-white text-right">PARCE QU'ON LES AIME</h1>
-                    <div class="w-96 h-5/6  rounded absolute top-20 right-0 p-4 mr-2 id=" id="opa">
+                    <div class="bg-[#626262] bg-opacity-50 w-1/3 h-5/6 rounded absolute top-20 right-0 p-4 mr-2">
                         <div class="p-4 rounded">
-                            <p class="font-family: arial text-white text-base/loose">Bienvenue dans notre boutique virtuelle
+                            <p class="font-family: arial text-white text-base/loose leading-snug text-justify">Bienvenue dans
+                                notre boutique virtuelle
                                 d'accessoires pour chiens ! Nous sommes fiers de vous offrir une gamme variée de produits
                                 haut de gamme pour répondre aux besoins de votre animal de compagnie.</p>
                             <br>
-                            <p class="font-family: arial text-white text-base/loose">
+                            <p class="font-family: arial text-white text-base/loose leading-snug text-justify">
                                 Nous avons tout ce dont vous avez besoin pour rendre la vie de votre chien plus confortable
                                 et amusante.
                             </p>
                             <br>
-                            <p class="font-family: arial text-white text-base/loose">
+                            <p class="font-family: arial text-white text-base/loose leading-snug text-justify">
                                 Dans notre boutique, vous trouverez une large sélection de jouets interactifs, de laisses,
                                 de colliers, de harnais, de vêtements, de coussins confortables, de produits de toilettage
                                 et bien plus encore. Nous nous engageons à ne proposer que des produits de qualité
                                 supérieure, fabriqués par des marques de confiance.
                             </p>
                             <br>
-                            <p class="font-family: arial text-white text-base/loose">
+                            <p class="font-family: arial text-white text-base/loose leading-snug text-justify">
                                 Explorez notre boutique dès maintenant pour trouver les accessoires parfaits pour votre
                                 compagnon à quatre pattes !
                             </p>
@@ -35,7 +36,7 @@
                 </div>
                 <div class="text-black mt-4">
                     <button
-                        class="bg-[#5e5e4a] hover:bg-gray-700 text-white  py-2 px-4  absolute bottom-0 right-80 mr-20 w-48">
+                        class="bg-[#5e5e4a] hover:bg-gray-700 text-white py-2 px-4  absolute bottom-0 right-80 mr-20 w-48">
                         <a href="{{ '/products' }}">Magasinez</a>
                     </button>
                 </div>
@@ -44,7 +45,7 @@
 
         <div class="flex justify-center h-screen">
             <div class="w-5/6  bg-white flex justify-center">
-                <div class="grid grid-cols-[2fr,1fr] w-5/6 h-1/2 gap-4">
+                <div class="grid grid-cols-[6fr,1fr] w-5/6 h-1/2 gap-4">
                     <div class="">
                         <p class="text-2xl  mb-4">Les jouets intéractifs</p>
                         <p class="text-gray-800">
