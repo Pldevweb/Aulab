@@ -25,20 +25,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function(){
     return view('home', ['categories' => Categorie::get()]);
-});
+})->name('home');
 
-Route::view('about', 'about')
+Route::view('about', 'about', ['categories' => Categorie::get()])
     ->name('about');
-Route::view('blog', 'blog')
+
+Route::view('blog', 'blog', ['categories' => Categorie::get()])
     ->name('blog');
 
-Route::view('contact', 'contact')
+Route::view('contact', 'contact', ['categories' => Categorie::get()])
     ->name('contact');
 
-Route::view('products', 'products')
+Route::view('products', 'products', ['categories' => Categorie::get()])
     ->name('products');
 
-Route::view('partners', 'partners')
+Route::view('partners', 'partners', ['categories' => Categorie::get()])
     ->name('partners');
 
 Route::middleware('guest')->group(function () {
