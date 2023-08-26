@@ -26,7 +26,7 @@
                     <p class="text-xs text-justify">
                         <ul>
                             @foreach ($categories as $categorie)
-                                <li class="text-xs">{{ $categorie->name }}</li>
+                                <li class="text-xs"><a href="">{{ $categorie->name }}</a></li>
                             @endforeach
                         </ul>
                     </p>
@@ -90,10 +90,10 @@
                     <p class="text-xs text-justify">
                         <ul>
                             <li class="text-xs">
-                                000-0000
+                                <i class="fa-solid fa-phone"></i> 000-0000
                             </li>
                             <li class="text-xs">
-                                email@email.com
+                                <i class="fa-solid fa-envelope"></i> email@email.com
                             </li>
                         </ul>
                     </p>
@@ -118,7 +118,7 @@
                             <img src="{{ asset('storage/images/paypal.png') }}" class="p-1"/>
                         </div>
                     </div>
-                    <div class="text-[#5e5e4a] text-xs flex items-center">
+                    <div class="text-[#5e5e4a] text-xs flex items-center justify-end">
                         <button x-on:click="window.scrollTo({ top: 0, behavior: 'smooth' })" class="bg-[#5e5e4a] p-1 m-1 h-8 w-8 rounded-full text-sm focus:outline-none">
                                 <i class="fa-solid fa-arrow-up text-white"></i>
                         </button>
