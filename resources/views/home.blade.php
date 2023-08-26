@@ -9,8 +9,10 @@
                     <h1 class="absolute top-0 right-0 p-4 text-3xl mr-4 text-white text-right uppercase">{{ __('messages.Parce_quon_les_aime') }}</h1>
                     <div class="bg-[#626262] bg-opacity-50 w-1/3 h-5/6 rounded absolute top-20 right-0 p-4 mr-2">
                         <div class="p-4 rounded">
+
                             <p class="text-white text-base/loose leading-snug text-justify">
                                 {{ __('messages.Introduction_p1') }}
+
                             </p>
                             <p class="text-white text-base/loose leading-snug text-justify mt-3">
                                 {{ __('messages.Introduction_p2') }}

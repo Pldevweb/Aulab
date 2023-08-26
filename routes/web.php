@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\EmailVerificationController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Models\User;
 use App\Models\Categorie;
+use App\Models\Product;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Auth\Passwords\Confirm;
 use App\Http\Livewire\Auth\Passwords\Email;
@@ -11,6 +12,7 @@ use App\Http\Livewire\Auth\Passwords\Reset;
 use App\Http\Livewire\Auth\Register;
 use App\Http\Livewire\Auth\Verify;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,21 +25,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function(){
-    return view('home', ['categories' => Categorie::get()]);
+Route::get('/', function () {
+    return view('home');
 })->name('home');
 
-Route::view('about', 'about', ['categories' => Categorie::get()])
-    ->name('about');
+Route::view('about', 'about')
+->name('about');
+Route::view('blog', 'blog')
+->name('blog');
 
-Route::view('blog', 'blog', ['categories' => Categorie::get()])
-    ->name('blog');
+Route::view('contact', 'contact')
+->name('contact');
 
-Route::view('contact', 'contact', ['categories' => Categorie::get()])
-    ->name('contact');
-
-Route::view('products', 'products', ['categories' => Categorie::get()])
-    ->name('products');
+Route::resource('products', ProductController::class);
 
 Route::view('partners', 'partners', ['categories' => Categorie::get()])
     ->name('partners');
