@@ -37,10 +37,11 @@ Route::view('blog', 'blog')
 Route::view('contact', 'contact')
 ->name('contact');
 
+Route::view('partners', 'partners')
+->name('partners');
+
 Route::resource('products', ProductController::class);
 
-Route::view('partners', 'partners', ['categories' => Categorie::get()])
-    ->name('partners');
 
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)
