@@ -11,6 +11,6 @@ class Product extends Model
     use HasFactory;
     public function categorie()
     {
-        return $this->belongsTo(Categorie::class, 'categorie_id'); // Adjust the foreign key column name if needed
+        return $this->belongsTo(Categorie::class, 'categorie_id');
     }
 }
