@@ -38,10 +38,9 @@ Route::view('contact', 'contact')
 ->name('contact');
 
 Route::view('partners', 'partners')
-    ->name('partners');
+->name('partners');
 
 Route::resource('products', ProductController::class);
-
 
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)
