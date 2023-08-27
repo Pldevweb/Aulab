@@ -19,6 +19,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Blade::component('footer-template', Footer::class);
+        Blade::component('package-footer', Footer::class);
     }
 }
