@@ -1,4 +1,3 @@
-<footer class="relative bottom-0">
     <div>
         <div class="bg-[#cdcdc8] text-[#5e5e4a] px-72 py-5 grid grid-cols-4 grid-rows-1 gap-x-5">
             <div>
@@ -107,4 +106,3 @@
             </div>
         </div>
     </div>
-</footer>
