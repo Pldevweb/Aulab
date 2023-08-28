@@ -6,8 +6,9 @@
             <div class="w-5/6 mt-3 bg-white flex justify-center">
                 <div class="w-5/6 h-3/4 mt-8 mb-0 bg-white relative bg-cover bg-center"
                     style="background-image: url(https://hips.hearstapps.com/hmg-prod/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=1.00xw:0.756xh;0,0.0756xh&resize=1200:*)">
-                    <h1 class="absolute top-0 right-0 p-4 text-3xl mr-4 text-white text-right uppercase">{{ __('messages.Parce_quon_les_aime') }}</h1>
-                    <div class="bg-[#626262] bg-opacity-50 w-1/3 h-5/6 rounded absolute top-20 right-0 p-4 mr-2">
+                    <h1 class="absolute top-0 right-0 p-4 text-3xl mr-4 text-white text-right uppercase">
+                        {{ __('messages.Parce_quon_les_aime') }}</h1>
+                    <div class="bg-[#626262] bg-opacity-50 w-1/4 h-5/6 rounded absolute top-20 right-0 p-4 mr-2">
                         <div class="p-4 rounded">
 
                             <p class="text-white text-base/loose leading-snug text-justify">
@@ -62,7 +63,8 @@
                             style="background-image: url('https://www.akc.org/wp-content/uploads/2021/07/Cavalier-King-Charles-Spaniel-laying-down-indoors.jpeg')">
                         </div>
                         <div class="flex items-center">
-                            <button class="border border-[#5e5e4a] mb-56 h-auto ml-8 w-32 hover:bg-gray-400 text-gray-800 p-3">
+                            <button
+                                class="border border-[#5e5e4a] mb-56 h-auto ml-8 w-32 hover:bg-gray-400 text-gray-800 p-3">
                                 <a href="{{ '/products' }}" class="text-xs text-[#5e5e4a]">
                                     {{ __('messages.Voir_les_jouets') }}
                                 </a>
