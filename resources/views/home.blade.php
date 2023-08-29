@@ -7,6 +7,7 @@
                 {{ __('messages.Parce_quon_les_aime') }}
             </h1>
             <div class="flex justify-end">
+
             <div class="bg-[#626262] bg-opacity-50 w-1/3 h-5/6 rounded p-4 m-2 drop-shadow-[1px_1px_2px_#5e5e4a]">
                 <p class="text-white text-base/loose leading-snug text-justify">
                     {{ __('messages.Introduction_p1') }}

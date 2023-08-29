@@ -10,7 +10,7 @@
 
         @extends('layouts.base')
     </head>
-
+    
     <body x-data class="bg-[#DBDBD8]">
         <header class="h-auto">
             <x-header></x-header>
