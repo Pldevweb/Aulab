@@ -44,6 +44,13 @@ return [
     de compagnie, tout en renforçant leur relation avec lui.',
 
     'Parce_quon_les_aime' => 'Parce qu\'on les aime',
-
     'Voir_les_jouets' => 'Voir les jouets',
+
+    'Les_friandises' => 'Les friandises, au bonheur de nos compagnons à quatre pattes',
+    'Les_friandises_p1' => 'Les gâteries pour chiens sont un élément important de la vie de votre animal de compagnie. Elles peuvent servir de récompense pour un comportement positif, de distraction pendant les séances d\'entraînement ou simplement comme une délicieuse collation.',
+    'Les_friandises_p2' => 'Nous avons une sélection de gâteries pour chiens de qualité supérieure, saines et nutritives, dont les biscuits, les os à mâcher, les bâtonnets à saveur, et plusieurs gâteries.',
+    'Les_friandises_p3' => 'Notre sélection de friandises pour chiens est conçue pour répondre aux différents besoins nutritionnels de votre animal de compagnie.',
+    'Les_friandises_p4' => 'En somme, les gâteries pour chiens peuvent être une excellente façon de récompenser votre animal de compagnie et de renforcer votre lien avec lui. En achetant en ligne, vous pouvez facilement trouver une grande variété de gâteries saines et nutritives pour votre chien, tout en ayant la commodité de les recevoir directement chez vous.',
+
+    'Voir_les_friandises' => 'Voir les friandises',
 ];
