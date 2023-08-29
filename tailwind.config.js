@@ -6,6 +6,9 @@ module.exports = {
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],
             },
+            backgroundImage: theme => ({
+                'accueil': "url('/storage/app/public/images/accueilimg.jpg')",
+            }),
         },
     },
     variants: {

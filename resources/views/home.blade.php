@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="flex items-center bg-white flex-col w-4/6 m-3">
-        <div class="w-5/6 h-5/6 mt-4 bg-cover bg-center bg-[url('{{ asset('storage/images/accueilimg.jpg') }}')]">
+        <div class="w-5/6 h-5/6 mt-4 bg-cover bg-center bg-accueil">
             <h1 class="pr-4 text-3xl text-white uppercase text-right drop-shadow-[1px_1px_2px_#5e5e4a]">
                 {{ __('messages.Parce_quon_les_aime') }}
             </h1>
