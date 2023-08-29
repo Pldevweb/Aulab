@@ -42,7 +42,6 @@ Route::view('partners', 'partners')
 
 Route::resource('products', ProductController::class);
 
-
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)
         ->name('login');

@@ -71,6 +71,7 @@
                 class="absolute right-0 py-2 mt-2 bg-white bg-gray-100 rounded-md shadow-xl w-44">
                 <div class="block px-4 py-2 text-sm text-center">
                     {{ __('messages.Bienvenue') }} {{ Auth::user()->name }} !
+
                 </div>
                 <a href="#"
                     class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white"
