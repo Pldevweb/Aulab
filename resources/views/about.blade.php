@@ -3,7 +3,7 @@
 @section('content')
         <div class="w-3/4 grid grid-cols-2 gap-4 mt-4">
             <div class="bg-[#f8f8f8] rounded-lg p-4 flex flex-col items-center">
-                <img class="rounded-t-lg" src="https://st2.depositphotos.com/2673929/43307/i/600/depositphotos_433072404-stock-photo-isolated-portrait-smiling-young-european.jpg" alt="Businesswoman in Office" />
+                <img class="rounded-t-lg" src="https://st2.depositphotos.com/2673929/43307/i/600/depositphotos_433072404-stock-photo-isolated-portrait-smiling-young-european.jpg" alt="Businesswoman in Office" class="h-2/5 object-cover" />
                 <h1 class="m-1 text-2xl font-bold text-[#5e5e4a] text-center">
                     Ginette Reno
                 </h1>
@@ -12,7 +12,7 @@
                 </p>
             </div>
             <div class="bg-[#f8f8f8] rounded-lg p-4 flex flex-col items-center">
-                <img class="rounded-t-lg" src="https://st3.depositphotos.com/9881890/16378/i/450/depositphotos_163785870-stock-photo-blonde-smiling-businesswoman.jpg" alt="Businesswoman in Office" />
+                <img class="rounded-t-lg" src="https://st3.depositphotos.com/9881890/16378/i/450/depositphotos_163785870-stock-photo-blonde-smiling-businesswoman.jpg" alt="Businesswoman in Office" class="h-2/5 object-cover" />
                 <h1 class="m-1 text-2xl font-bold text-[#5e5e4a] text-center">
                     Jeanne St-Jean
                 </h1>
