@@ -10,13 +10,15 @@
 
         @extends('layouts.base')
     </head>
-    
+
     <body x-data class="bg-[#DBDBD8]">
         <header class="h-auto">
             <x-header></x-header>
         </header>
         <main class="min-h-screen flex items-center justify-center">
-            @yield('content')
+            <div class="flex items-center bg-white flex-col w-4/6 m-3">
+                @yield('content')
+            </div>
         </main>
         @isset($slot)
             {{ $slot }}

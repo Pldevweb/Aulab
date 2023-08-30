@@ -44,6 +44,37 @@ return [
     de compagnie, tout en renforçant leur relation avec lui.',
 
     'Parce_quon_les_aime' => 'Parce qu\'on les aime',
-
     'Voir_les_jouets' => 'Voir les jouets',
+
+    'Les_friandises' => 'Les friandises, au bonheur de nos compagnons à quatre pattes',
+    'Les_friandises_p1' => 'Les gâteries pour chiens sont un élément important de la vie de votre animal de compagnie. Elles peuvent servir de récompense pour un comportement positif, de distraction pendant les séances d\'entraînement ou simplement comme une délicieuse collation.',
+    'Les_friandises_p2' => 'Nous avons une sélection de gâteries pour chiens de qualité supérieure, saines et nutritives, dont les biscuits, les os à mâcher, les bâtonnets à saveur, et plusieurs gâteries.',
+    'Les_friandises_p3' => 'Notre sélection de friandises pour chiens est conçue pour répondre aux différents besoins nutritionnels de votre animal de compagnie.',
+    'Les_friandises_p4' => 'En somme, les gâteries pour chiens peuvent être une excellente façon de récompenser votre animal de compagnie et de renforcer votre lien avec lui. En achetant en ligne, vous pouvez facilement trouver une grande variété de gâteries saines et nutritives pour votre chien, tout en ayant la commodité de les recevoir directement chez vous.',
+
+    'Voir_les_friandises' => 'Voir les friandises',
+
+    'Le_Chiot' => 'Le Chiot',
+
+    'Le_chiot_p1' => 'L\'éducation d\'un chiot est une étape importante dans la vie de tout propriétaire de chien. Cela peut être un processus enrichissant et gratifiant, mais cela peut également être un défi si vous n\'avez pas les bons conseils, accessoires et outils à votre disposition.',
+
+    'Le_chiot_p2' => 'Assurez-vous de consacrer suffisamment de temps pour jouer avec votre chiot et le socialiser. Les chiots ont besoin de beaucoup d\'exercice et d\'interaction sociale pour se développer en chiens heureux et bien équilibrés.',
+
+    'Le_chiot_p3' => 'L\'arrivée d\'un nouveau chiot est une période passionnante, mais cela nécessite également une préparation adéquate. Assurez-vous que votre maison est sûre, choisissez une alimentation de qualité pour votre chiot, assurez-vous qu\'il est vacciné et vermifugé régulièrement, et consacrez suffisamment de temps pour jouer avec lui et le socialiser. Avec ces précautions, vous pouvez aider à assurer une vie heureuse et en bonne santé pour votre chiot.',
+
+    'Le_chiot_p4' => 'Nous proposons une large sélection d\'accessoires de départ et tout le nécessaire pour l\'éducation de votre chiot, à chaque étape.  Tous nos produits sont de haute qualité et sont conçus pour aider votre chiot à apprendre et à se développer de manière saine et heureuse.',
+
+    'Voir_nos_essentiels' => 'Voir nos essentiels',
+
+    'Le_Chien_Actif' => 'Le Chien Actif',
+
+    'Le_Chien_Actif_p1' => 'Le sport canin est une excellente activité pour les personnes qui cherchent à rester actives et à passer du temps avec leur animal de compagnie. Les sports canins comprennent des activités telles que l\'agilité, le canicross l\'obéissance, le flyball et le frisbee, et peuvent être pratiqués à différents niveaux de compétence, du loisir à la compétition.',
+
+    'Le_Chien_Actif_p2' => 'De plus en plus de propriétaires de chiens s\'intéressent aux sports canins et cherchent des équipements de qualité pour pratiquer ces activités.',
+
+    'Le_Chien_Actif_p3' => 'Les équipements pour le sport canin comprennent des obstacles d\'agilité, des balles de flyball, des frisbees, des harnais et des laisses spéciales pour les sports canins. Les propriétaires peuvent également trouver des équipements pour l\'obéissance, tels que des cônes et des bâtons pour la formation.',
+
+    'Le_Chien_Actif_p4' => 'Le sport canin est une excellente façon de rester actif avec son chien et de renforcer les liens entre le propriétaire et son animal de compagnie.',
+
+    'Voir_nos_equipements' => 'Voir nos équipements',
 ];
