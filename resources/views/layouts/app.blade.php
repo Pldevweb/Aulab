@@ -16,7 +16,7 @@
             <x-header></x-header>
         </header>
         <main class="min-h-screen flex items-center justify-center">
-            <div class="min-h-screen flex items-center bg-white flex-col w-4/6 m-3">
+            <div class="min-h-screen flex items-center bg-white flex-col w-screen md:w-4/6 min-[3440px]:w-2/5 m-3">
                 @yield('content')
             </div>
         </main>
