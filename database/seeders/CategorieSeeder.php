@@ -13,28 +13,20 @@ class CategorieSeeder extends Seeder
      */
     public function run(): void
     {
-        Categorie::factory()->create([
-            'name' => 'Accessoires',
-        ]);
 
-         Categorie::factory()->create([
-            'name' => 'Accessoires de sport',
-        ]);
+        $categories = [
+            'Accessoires',
+            'Accessoires de sport',
+            'Jouets',
+            'Nourriture',
+            'Produits de toilettage',
+            'Vêtements',
+        ];
 
-        Categorie::factory()->create([
-            'name' => 'Jouets',
-        ]);
-
-        Categorie::factory()->create([
-            'name' => 'Nourriture',
-        ]);
-
-        Categorie::factory()->create([
-            'name' => 'Produits de toilettage',
-        ]);
-
-        Categorie::factory()->create([
-            'name' => 'Vêtements',
-        ]);
+        foreach ($categories as $categoryName) {
+            Categorie::factory()->create([
+                'name' => $categoryName,
+            ]);
+        }
     }
 }
