@@ -3,12 +3,11 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Product;
-use App\Models\Partner;
+
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Product>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class ProductFactory extends Factory
+class ProductCategoryFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,9 +17,7 @@ class ProductFactory extends Factory
     public function definition(): array
     {
         return [
-            'partner_id' => function () {
-                return Partner::factory()->create()->id;
-            }
+            //
         ];
     }
 }
