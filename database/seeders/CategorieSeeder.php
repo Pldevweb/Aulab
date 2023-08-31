@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\Categorie;
+use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class CategorieSeeder extends Seeder
 {
@@ -13,6 +13,7 @@ class CategorieSeeder extends Seeder
      */
     public function run(): void
     {
+
         $categories = [
             'Accessoires',
             'Accessoires de sport',
