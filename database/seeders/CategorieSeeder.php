@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Categorie;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class CategorieSeeder extends Seeder
@@ -23,9 +24,19 @@ class CategorieSeeder extends Seeder
             'Vêtements',
         ];
 
+        $categoriesSlug = [
+            'accessories',
+            'sport-accessories',
+            'toys',
+            'food',
+            'grooming-products',
+            'clothes',
+        ];
+
         foreach ($categories as $categoryName) {
-            Categorie::factory()->create([
+            Categorie::firstOrCreate([
                 'name' => $categoryName,
+                'slug' => $categoriesSlug[array_search($categoryName, $categories)],
             ]);
         }
     }

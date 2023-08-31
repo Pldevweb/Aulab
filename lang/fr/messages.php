@@ -77,4 +77,6 @@ return [
     'Le_Chien_Actif_p4' => 'Le sport canin est une excellente façon de rester actif avec son chien et de renforcer les liens entre le propriétaire et son animal de compagnie.',
 
     'Voir_nos_equipements' => 'Voir nos équipements',
+
+    'Voir_tous_les_produits' => 'Voir tous les produits',
 ];

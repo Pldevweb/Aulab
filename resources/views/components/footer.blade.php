@@ -5,7 +5,7 @@
                 <p class="text-sm text-justify">
                 <ul>
                     @foreach ($categories as $categorie)
-                        <li class="text-sm"><a href="">{{ $categorie->name }}</a></li>
+                        <li class="text-sm"><a href="{{ route('productsbycategorie', $categorie->slug) }}">{{ $categorie->name }}</a></li>
                     @endforeach
                 </ul>
                 </p>

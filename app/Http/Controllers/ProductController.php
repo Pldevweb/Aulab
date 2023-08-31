@@ -19,6 +19,14 @@ class ProductController extends Controller
         return view('products', compact('categories', 'products'));
     }
 
+    public function showProductsByCategorie($slug)
+    {
+        $categorieModel = Categorie::where('slug', $slug)->firstOrFail();
+        $categories = Categorie::all();
+        $products = $categorieModel->products;
+        return view('ProductsByCategorie', compact('products', 'categorieModel', 'categories'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
