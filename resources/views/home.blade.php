@@ -1,75 +1,140 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="bg-[#DBDBD8]">
-        <div class="flex justify-center h-screen">
-            <div class="w-5/6 mt-3 bg-white flex justify-center">
-                <div class="w-5/6 h-3/4 mt-8 mb-0 bg-white relative bg-cover bg-center"
-                    style="background-image: url(https://hips.hearstapps.com/hmg-prod/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=1.00xw:0.756xh;0,0.0756xh&resize=1200:*)">
-                    <h1 class="absolute top-0 right-0 p-4 text-3xl mr-4 text-white text-right uppercase">{{ __('messages.Parce_quon_les_aime') }}</h1>
-                    <div class="bg-[#626262] bg-opacity-50 w-1/3 h-5/6 rounded absolute top-20 right-0 p-4 mr-2">
-                        <div class="p-4 rounded">
+        <section class="w-5/6 h-5/6 mt-5 bg-cover bg-center bg-accueil">
+            <h1 class="pr-4 text-3xl text-white uppercase text-right drop-shadow-[1px_1px_2px_#5e5e4a]">
+                {{ __('messages.Parce_quon_les_aime') }}
+            </h1>
+            <div class="flex justify-end">
 
-                            <p class="text-white text-base/loose leading-snug text-justify">
-                                {{ __('messages.Introduction_p1') }}
-
-                            </p>
-                            <p class="text-white text-base/loose leading-snug text-justify mt-3">
-                                {{ __('messages.Introduction_p2') }}
-                            </p>
-                            <p class="text-white text-base/loose leading-snug text-justify mt-3">
-                                {{ __('messages.Introduction_p3') }}
-                            </p>
-                            <p class="text-white text-base/loose leading-snug text-justify mt-3">
-                                {{ __('messages.Introduction_p4') }}
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="text-black mt-4">
-                    <button
-                        class="bg-[#5e5e4a] hover:bg-gray-700 text-white py-2 px-4  absolute bottom-0 right-80 mr-20 w-48">
-                        <a href="{{ '/products' }}">{{ __('messages.Magasinez') }}</a>
+            <div class="bg-[#626262] bg-opacity-50 w-1/3 h-5/6 rounded p-4 m-2 drop-shadow-[1px_1px_2px_#5e5e4a]">
+                <p class="text-white text-base/loose leading-snug text-justify">
+                    {{ __('messages.Introduction_p1') }}
+                </p>
+                <p class="text-white text-base/loose leading-snug text-justify mt-3">
+                    {{ __('messages.Introduction_p2') }}
+                </p>
+                <p class="text-white text-base/loose leading-snug text-justify mt-3">
+                    {{ __('messages.Introduction_p3') }}
+                </p>
+                <p class="text-white text-base/loose leading-snug text-justify mt-3">
+                    {{ __('messages.Introduction_p4') }}
+                </p>
+            </div>
+            </div>
+        </section>
+        <section class="w-5/6 text-right mt-5 mb-5">
+            <button class="p-3 text-right bg-[#5e5e4a] hover:bg-[#727262] text-white">
+                <a href="{{ '/products' }}">{{ __('messages.Magasinez') }}</a>
+            </button>
+        </section>
+        <section class="mt-5 mb-5 grid grid-cols-[6fr,1fr] w-5/6 h-1/2 gap-4">
+            <div>
+                <h1 class="text-2xl text-[#5e5e4a] mb-4 uppercase">{{ __('messages.Les_jouets_interactifs') }}</h1>
+                <p class=" text-[#5e5e4a] text-justify">
+                    {{ __('messages.Jouets_p1') }}
+                </p>
+                <p class=" text-[#5e5e4a] mt-3 text-justify">
+                    {{ __('messages.Jouets_p2') }}
+                </p>
+                <p class=" text-[#5e5e4a] mt-3 text-justify">
+                    {{ __('messages.Jouets_p3') }}
+                </p>
+                <p class=" text-[#5e5e4a] mt-3 text-justify">
+                    {{ __('messages.Jouets_p4') }}
+                </p>
+                <p class=" text-[#5e5e4a] mt-3 text-justify">
+                    {{ __('messages.Jouets_p5') }}
+                </p>
+            </div>
+            <div class="flex flex-col h-full justify-center items-center">
+                <img src="{{ asset('storage\images\accueilimg2.jpeg') }}" class="h-96 w-48 object-cover"/>
+                <button class="border border-[#5e5e4a] w-32 hover:bg-[#e3e3d2] text-gray-800 p-3 m-2">
+                    <a href="{{ '/products' }}" class="text-xs text-[#5e5e4a]">
+                        {{ __('messages.Voir_les_jouets') }}
+                    </a>
+                </button>
+            </div>
+        </section>
+        <section class="mt-5 mb-5 grid grid-cols-[2fr,5fr] w-5/6 gap-4">
+            <img src="{{ asset('storage\images\accueilimg3.png') }}" class="h-full object-cover drop-shadow-[-1em_1em_0px_#5e5e4a]"/>
+            <div>
+                <h1 class="uppercase text-2xl text-justify text-[#5e5e4a] p-2">
+                    {{ __('messages.Les_friandises') }}
+                </h1>
+                <p class="text-justify text-[#5e5e4a]">
+                    {{ __('messages.Les_friandises_p1') }}
+                </p>
+                <p class="text-justify mt-3 text-[#5e5e4a]">
+                    {{ __('messages.Les_friandises_p2') }}
+                </p>
+                <p class="text-justify mt-3 text-[#5e5e4a]">
+                    {{ __('messages.Les_friandises_p3') }}
+                </p>
+                <p class="text-justify mt-3 text-[#5e5e4a]">
+                    {{ __('messages.Les_friandises_p4') }}
+                </p>
+                <div class="text-center">
+                    <button class="border border-[#5e5e4a] w-32 hover:bg-[#e3e3d2] text-gray-800 p-3 m-2">
+                        <a href="{{ '/products' }}" class="text-xs text-[#5e5e4a]">
+                            {{ __('messages.Voir_les_friandises') }}
+                        </a>
                     </button>
                 </div>
             </div>
-        </div>
-
-        <div class="flex justify-center h-screen">
-            <div class="w-5/6  bg-white flex justify-center">
-                <div class="grid grid-cols-[6fr,1fr] w-5/6 h-1/2 gap-4">
-                    <div class="">
-                        <p class="text-2xl  mb-4">{{ __('messages.Les_jouets_interactifs') }}</p>
-                        <p class="text-gray-800">
-                            {{ __('messages.Jouets_p1') }}
-                        </p>
-                        <p class="text-gray-800 mt-3">
-                            {{ __('messages.Jouets_p2') }}
-                        </p>
-                        <p class="text-gray-800 mt-3">
-                            {{ __('messages.Jouets_p3') }}
-                        </p>
-                        <p class="text-gray-800 mt-3">
-                            {{ __('messages.Jouets_p4') }}
-                        </p>
-                        <p class="text-gray-800 mt-3">
-                            {{ __('messages.Jouets_p5') }}
-                        </p>
-                    </div>
-                    <div class="flex flex-col justify-between h-full">
-                        <div class="flex items-center justify-center h-96 w-48 bg-cover bg-center object-cover"
-                            style="background-image: url('https://www.akc.org/wp-content/uploads/2021/07/Cavalier-King-Charles-Spaniel-laying-down-indoors.jpeg')">
-                        </div>
-                        <div class="flex items-center">
-                            <button class="border border-[#5e5e4a] mb-56 h-auto ml-8 w-32 hover:bg-gray-400 text-gray-800 p-3">
-                                <a href="{{ '/products' }}" class="text-xs text-[#5e5e4a]">
-                                    {{ __('messages.Voir_les_jouets') }}
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+        </section>
+        <section class="mt-5 mb-5 grid grid-cols-[2fr,1fr] w-5/6 h-1/2 gap-4">
+            <div>
+                <h1 class="text-2xl text-[#5e5e4a] mb-4 uppercase">
+                    {{ __('messages.Le_Chiot') }}
+                </h1>
+                <p class=" text-[#5e5e4a] text-justify">
+                    {{ __('messages.Le_chiot_p1') }}
+                </p>
+                <p class=" text-[#5e5e4a] mt-3 text-justify">
+                    {{ __('messages.Le_chiot_p2') }}
+                </p>
+                <p class=" text-[#5e5e4a] mt-3 text-justify">
+                    {{ __('messages.Le_chiot_p3') }}
+                </p>
+                <p class=" text-[#5e5e4a] mt-3 text-justify">
+                    {{ __('messages.Le_chiot_p4') }}
+                </p>
             </div>
-        </div>
-    @endsection
+            <div class="flex flex-col h-full justify-center items-center">
+                <img src="{{ asset('storage\images\accueilimg4.png') }}" class="h-3/5 object-cover"/>
+                <button class="border border-[#5e5e4a] w-36 hover:bg-[#e3e3d2] text-gray-800 p-3 m-5">
+                    <a href="{{ '/products' }}" class="text-xs text-[#5e5e4a]">
+                        {{ __('messages.Voir_nos_essentiels') }}
+                    </a>
+                </button>
+            </div>
+        </section>
+        <section class="mt-5 mb-5 grid grid-cols-[1fr,1fr] w-5/6 h-1/2 gap-4">
+            <div class="flex flex-col h-full justify-center items-center">
+                <img src="{{ asset('storage\images\accueilimg5.jpg') }}" class="h-3/5 object-cover"/>
+                <button class="border border-[#5e5e4a] w-36 hover:bg-[#e3e3d2] text-gray-800 p-3 m-10">
+                    <a href="{{ '/products' }}" class="text-xs text-[#5e5e4a]">
+                        {{ __('messages.Voir_nos_equipements') }}
+                    </a>
+                </button>
+            </div>
+            <div>
+                <h1 class="text-2xl text-[#5e5e4a] mb-4 uppercase">
+                    {{ __('messages.Le_Chien_Actif') }}
+                </h1>
+                <p class=" text-[#5e5e4a] text-justify">
+                    {{ __('messages.Le_Chien_Actif_p1') }}
+                </p>
+                <p class=" text-[#5e5e4a] mt-3 text-justify">
+                    {{ __('messages.Le_Chien_Actif_p2') }}
+                </p>
+                <p class=" text-[#5e5e4a] mt-3 text-justify">
+                    {{ __('messages.Le_Chien_Actif_p3') }}
+                </p>
+                <p class=" text-[#5e5e4a] mt-3 text-justify">
+                    {{ __('messages.Le_Chien_Actif_p4') }}
+                </p>
+            </div>
+        </section>
+@endsection
