@@ -13,6 +13,7 @@ use App\Http\Livewire\Auth\Register;
 use App\Http\Livewire\Auth\Verify;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,8 +32,9 @@ Route::get('/', function () {
 
 Route::view('about', 'about')
 ->name('about');
-Route::view('blog', 'blog')
-->name('blog');
+
+Route::get('/blog', [ArticleController::class, 'index'])
+    ->name('blog');
 
 Route::view('contact', 'contact')
 ->name('contact');
