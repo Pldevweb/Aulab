@@ -22,6 +22,7 @@ class ArticleFactory extends Factory
             'content' => $this->faker->paragraph,
             'created_at' => now(),
             'updated_at' => now(),
+            'user_id' => 1,
         ];
     }
 }

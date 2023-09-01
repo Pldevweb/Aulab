@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="p-4">
-        <h1 class="text-2xl font-semibold mb-4 text-[#5e5e4a]">Liste de produits</h1>
+        <h1 class="text-2xl font-semibold mb-4 text-[#5e5e4a]">{{ $categorieModel->name }}</h1>
         <div class="flex flex-row">
             <div class="bg-[#ededed] text-[#5e5e4a] w-full rounded-lg shadow-md p-2 m-1 mb-3 text-sm text-center">
                 <a href="/products">{{ __('messages.Voir_tous_les_produits') }}</a>
@@ -14,7 +14,7 @@
             @endforeach
         </div>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            @foreach ($products as $product)
+            @foreach ($categorieModel->products as $product)
                 <div class="bg-[#f8f8f8] rounded-lg shadow-md p-6">
                     <h2 class="text-xl font-semibold mb-2 text-[#5e5e4a]">{{ $product->name }}</h2>
                     <p class="text-[#5e5e4a]">{{ $product->description }}</p>

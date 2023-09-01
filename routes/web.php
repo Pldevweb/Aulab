@@ -42,6 +42,8 @@ Route::view('contact', 'contact')
 Route::view('partners', 'partners')
 ->name('partners');
 
+Route::get('products/{categorie}', [ProductController::class, 'showProductsByCategorie'])->name('productsbycategorie');
+
 Route::resource('products', ProductController::class);
 
 Route::middleware('guest')->group(function () {

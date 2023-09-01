@@ -5,7 +5,7 @@
                 <p class="text-sm text-justify">
                 <ul>
                     @foreach ($categories as $categorie)
-                        <li class="text-sm"><a href="">{{ $categorie->name }}</a></li>
+                        <li class="text-sm"><a href="{{ route('productsbycategorie', $categorie->slug) }}">{{ $categorie->name }}</a></li>
                     @endforeach
                 </ul>
                 </p>
@@ -86,7 +86,7 @@
                         Site web par Danyka Enair et Pier-Luc Lemay
                     </p>
                 </div>
-                <div class="m-1 p-1 text-[#5e5e4a] text-sm grid grid-cols-[1fr_1fr_10fr] flex items-center">
+                <div class="m-1 p-1 text-[#5e5e4a] text-sm grid grid-cols-[1fr_1fr_10fr]">
                     <div class="bg-white w-8 h-6 flex items-center">
                         <img src="{{ asset('storage/images/mastercard.png') }}" class="p-1" />
                     </div>
