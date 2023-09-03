@@ -23,6 +23,11 @@ class ProductController extends Controller
     {
         $categorieModel = Categorie::where('slug', $slug)->firstOrFail();
         $categories = Categorie::all();
+
+        foreach ($categories as $categorie) {
+            $categorie->isActive = $categorie->slug === $slug;
+        }
+
         $products = $categorieModel->products;
         return view('ProductsByCategorie', compact('products', 'categorieModel', 'categories'));
     }

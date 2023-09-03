@@ -1,4 +1,4 @@
-<div class="w-full flex items-center justify-center bg-[#5e5e4a] font-sans h-7 p-2" id="navbar-user">
+<div class="w-full flex items-center justify-center bg-button font-sans h-7 p-2" id="navbar-user">
     <a href="" class="text-white text-center font-sans text-sm uppercase">
         {{ __('messages.Offres') }}
     </a>
@@ -30,7 +30,7 @@
                 <div x-data="{ dropdownMenu: false }" class="relative" @click.away="dropdownMenu = false">
                     <button @click="dropdownMenu = ! dropdownMenu"
                         class="flex justify-end items-end p-2 bg-white rounded-md focus:outline-none">
-                        <span class="bg-[#5e5e4a] p-1 h-8 w-8 rounded-full">
+                        <span class="bg-button p-1 h-8 w-8 rounded-full">
                             <i class="fa-solid fa-user text-white"></i>
                         </span>
                     </button>
@@ -38,14 +38,14 @@
                         <div x-show="dropdownMenu"
                             class="absolute right-0 py-2 mt-2 bg-white rounded-md shadow-xl w-44">
                             <a href="{{ route('login') }}"
-                                class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#5e5e4a] hover:text-white"
+                                class="block px-4 py-2 text-sm text-gray-300 hover:bg-button hover:text-white"
                                 role="button" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ __('messages.Login') }}
                             </a>
             @endif
             @if (Route::has('register'))
                 <a href="{{ route('register') }}"
-                    class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#5e5e4a] hover:text-white">
+                    class="block px-4 py-2 text-sm text-gray-300 hover:bg-button hover:text-white">
                     {{ __('messages.Register') }}
                 </a>
         </div>
@@ -60,7 +60,7 @@
                 <img src="{{ asset(Auth::user()->profile_photo) }}" alt="Profile Photo"
                     class="p-1 h-10 w-10 rounded-full object-cover">
             @else
-                <span class="bg-[#5e5e4a] p-1 h-8 w-8 rounded-full">
+                <span class="bg-button p-1 h-8 w-8 rounded-full">
                     <i class="fa-solid fa-user text-white"></i>
                 </span>
             @endif
@@ -68,20 +68,20 @@
         </button>
         <template x-if="true">
             <div x-show="dropdownMenu"
-                class="absolute right-0 py-2 mt-2 bg-white rounded-md shadow-xl w-44">
-                <div class="block px-4 py-2 text-sm text-center">
+                class="absolute right-0 py-2 mt-2 rounded-md shadow-sm w-44 bg-card border-2 border-[#ededed]">
+                <div class="block px-4 py-2 text-sm text-center font-semibold text-[#656553]">
                     {{ __('messages.Bienvenue') }} {{ Auth::user()->name }} !
-
                 </div>
+                <hr/>
                 <a href="#"
-                    class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#5e5e4a] hover:text-white"
+                    class="block px-4 py-2 text-sm text-main-color hover:bg-[#ededed] hover:text-[#808073]"
                     role="button" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ __('messages.Editer_mon_profil') }}
                 </a>
                 <a href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();"
-                    class="block px-4 py-2 text-sm text-gray-300 hover:bg-[#5e5e4a] hover:text-white">
+                    class="block px-4 py-2 text-sm text-main-color hover:bg-[#ededed] hover:text-[#808073]">
                     {{ __('messages.Logout') }}
                 </a>
 
@@ -98,37 +98,37 @@
     <ul class="mx-auto flex flex-col font-medium border-0 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 text-sm">
         <li>
             <a href="{{ url('/') }}"
-                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-medium">
+                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
                 {{ __('messages.Accueil') }}
             </a>
         </li>
         <li>
             <a href="{{ url('/products') }}"
-                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-medium">
+                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
                 {{ __('messages.Boutique') }}
             </a>
         </li>
         <li>
             <a href="{{ url('/partners') }}"
-                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-medium">
+                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
                 {{ __('messages.Partenaire') }}
             </a>
         </li>
         <li>
             <a href="{{ url('/blog') }}"
-                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-medium">
+                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
                 {{ __('messages.Blog') }}
             </a>
         </li>
         <li>
             <a href="{{ url('/about') }}"
-                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-medium">
+                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
                 {{ __('messages.A_propos_dAulab') }}
             </a>
         </li>
         <li>
             <a href="{{ url('/contact') }}"
-                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-medium">
+                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
                 {{ __('messages.Nous_contacter') }}
             </a>
         </li>
