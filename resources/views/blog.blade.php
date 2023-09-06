@@ -9,6 +9,11 @@
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             @foreach ($articles as $article)
                 <div class="bg-card rounded-lg shadow-md p-6">
+                    <img src="{{ $article->user->profile_photo }}" alt="photo de profil" class="float-left w-1/6 mr-1">
+                    <strong>{{ $article->user->name }}</strong>
+                    @if ($article->user && $article->user->role)
+                        {{ $article->user->role->display_name }}
+                    @endif
                     <h2 class="text-base font-semibold mb-2 text-main-color">{{ $article->title }}</h2>
                     <img src="{{ $article->thumbnail }}" alt="{{ $article->title }}" class="mb-2">
                     <p class="text-sm text-main-color text-justify">{{ substr($article->content, 0, 100) . (strlen($article->content) > 100 ? '...' : '') }}</p>

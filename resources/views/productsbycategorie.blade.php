@@ -5,13 +5,13 @@
         <h1 class="text-2xl font-semibold mb-4 text-main-color">{{ $categorieModel->name }}</h1>
         <div class="flex flex-row">
             <a href="/products" class="m-1 basis-1/4">
-                <div class="text-main-color w-full rounded-lg shadow-md p-2 mb-3 text-sm text-center notactive">
+                <div class="text-main-color w-full rounded-lg shadow-md p-2 mb-3 text-xs text-center notactive">
                     {{ __('messages.Voir_tous_les_produits') }}
                 </div>
             </a>
             @foreach ($categories as $categorie)
             <a href="{{ route('productsbycategorie', $categorie->slug) }}" class="m-1 basis-1/4">
-                <div class="text-main-color w-full rounded-lg shadow-md p-2 mb-3 text-sm text-center {{ $categorie->isActive ? 'active' : 'notactive' }}">
+                <div class="text-main-color w-full rounded-lg shadow-md p-2 mb-3 text-xs text-center {{ $categorie->isActive ? 'active' : 'notactive' }}">
                     {{ $categorie->name }}
                 </div>
             </a>
