@@ -9,12 +9,27 @@ return [
     'Boutique' => 'Boutique',
     'Partenaire' => 'Partenaire',
     'Blog' => 'Blog',
-    'A_propos_dAulab' => 'A propos d\'Aulab',
+    'A_propos_dAulab' => 'À propos d\'Aulab',
     'Nous_contacter' => 'Nous contacter',
+    'La_boutique' => 'La boutique',
+    'Informations' => 'Informations',
+    'Mon_compte' => 'Mon compte',
+    'Les_articles' => 'Les articles',
 
     'Login' => 'Se connecter',
     'Logout' => 'Se déconnecter',
     'Register' => 'Créer un compte',
+
+    'A_propos' => 'À propos',
+    'Nos_partenaires' => 'Nos partenaires',
+    'Politique_livraison' => 'Politique de livraison',
+    'FAQ' => 'Foire aux questions',
+    'Contactez_nous' => 'Contactez-nous',
+    'Mes_commandes' => 'Mes commandes',
+    'Mes_adresses' => 'Mes adresses',
+    'Mes_informations_personnelles' => 'Mes informations personnelles',
+    'Tous_droits_reserves' => 'Tous droits réservés',
+    'Site_web_par' => 'Site web par Danyka Enair et Pier-Luc Lemay',
 
     'Introduction_p1' => 'Bienvenue dans notre boutique virtuelle d\'accessoires pour chiens ! Nous sommes fiers de vous offrir une gamme variée de produits haut de gamme pour répondre aux besoins de votre animal de compagnie.',
     'Introduction_p2' => 'Nous avons tout ce dont vous avez besoin pour rendre la vie de votre chien plus confortable et amusante.',
@@ -79,4 +94,7 @@ return [
     'Voir_nos_equipements' => 'Voir nos équipements',
 
     'Voir_tous_les_produits' => 'Voir tous les produits',
+
+    'Envoyer' => 'Envoyer',
+    'Envoyer_une_copie' => 'Envoyez-moi une copie de ce message.',
 ];
