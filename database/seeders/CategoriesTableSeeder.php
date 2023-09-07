@@ -14,12 +14,12 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-
+        
 
         \DB::table('categories')->delete();
-
+        
         \DB::table('categories')->insert(array (
-            0 =>
+            0 => 
             array (
                 'id' => 1,
                 'name' => 'Accessoires',
@@ -27,7 +27,7 @@ class CategoriesTableSeeder extends Seeder
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
             ),
-            1 =>
+            1 => 
             array (
                 'id' => 2,
                 'name' => 'Accessoires de sport',
@@ -35,7 +35,7 @@ class CategoriesTableSeeder extends Seeder
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
             ),
-            2 =>
+            2 => 
             array (
                 'id' => 3,
                 'name' => 'Jouets',
@@ -43,7 +43,7 @@ class CategoriesTableSeeder extends Seeder
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
             ),
-            3 =>
+            3 => 
             array (
                 'id' => 4,
                 'name' => 'Nourriture',
@@ -51,7 +51,7 @@ class CategoriesTableSeeder extends Seeder
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
             ),
-            4 =>
+            4 => 
             array (
                 'id' => 5,
                 'name' => 'Produits de toilettage',
@@ -59,7 +59,7 @@ class CategoriesTableSeeder extends Seeder
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
             ),
-            5 =>
+            5 => 
             array (
                 'id' => 6,
                 'name' => 'Vêtements',
@@ -67,16 +67,8 @@ class CategoriesTableSeeder extends Seeder
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
             ),
-            6 =>
-            array (
-                'id' => 8,
-                'name' => 'article pour chat',
-                'slug' => 'article-de-chat',
-                'created_at' => '2023-09-03 16:07:53',
-                'updated_at' => '2023-09-03 16:07:53',
-            ),
         ));
-
-
+        
+        
     }
 }

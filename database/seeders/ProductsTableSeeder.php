@@ -309,38 +309,14 @@ class ProductsTableSeeder extends Seeder
             ),
             24 => 
             array (
-                'id' => 29,
-                'name' => 'Insecte',
-                'description' => 'En général, les insectes sont un groupe diversifié de petits arthropodes à six pattes qui constituent le groupe d\'animaux le plus important sur Terre. On les trouve dans pratiquement tous les habitats terrestres et ils jouent un rôle essentiel dans les écosystèmes et l\'environnement. Voici quelques caractéristiques générales et informations sur les insectes .',
-                'price' => '3.99',
-                'discount' => 10,
-                'image' => 'https://cdn.futura-sciences.com/buildsv6/images/largeoriginal/c/3/4/c3449c7cc8_49335_def-insecte-mariea-flickr.jpg',
-                'created_at' => '2023-09-03 12:26:53',
-                'updated_at' => '2023-09-03 12:26:53',
-                'partner_id' => 1,
-            ),
-            25 => 
-            array (
-                'id' => 30,
-                'name' => 'Chaussure',
-                'description' => 'chaussure',
-                'price' => '19.99',
-                'discount' => 20,
-                'image' => 'https://m.media-amazon.com/images/I/71amUHr6mCL.jpg',
-                'created_at' => '2023-09-03 16:05:40',
-                'updated_at' => '2023-09-03 16:05:40',
-                'partner_id' => 1,
-            ),
-            26 => 
-            array (
                 'id' => 31,
                 'name' => 'Boite',
                 'description' => 'Carré et brun',
                 'price' => '0.20',
                 'discount' => 0,
                 'image' => 'https://www.bureauengros.com/cdn/shop/products/070eba8837d300e3d12e96ef5d0e832c3f62c526_square426298_1_1b409ce8-3436-4be3-a28c-50eb9fdaef23_1000x.jpg?v=1689960774',
-                'created_at' => '2023-09-06 22:13:28',
-                'updated_at' => '2023-09-06 22:13:28',
+                'created_at' => '2023-09-06 22:13:00',
+                'updated_at' => '2023-09-07 01:01:48',
                 'partner_id' => 1,
             ),
         ));
