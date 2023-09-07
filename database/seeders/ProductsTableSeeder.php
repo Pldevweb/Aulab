@@ -41,7 +41,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://img.20mn.fr/2c2xoZqdQhu84Dmhb8ci9Sk/1200x768_le-berger-australien-est-le-chien-prefere-des-francais',
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
-                'partner_id' => 2,
+                'partner_id' => 1,
             ),
             2 => 
             array (
@@ -53,7 +53,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://img.20mn.fr/2c2xoZqdQhu84Dmhb8ci9Sk/1200x768_le-berger-australien-est-le-chien-prefere-des-francais',
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
-                'partner_id' => 3,
+                'partner_id' => 1,
             ),
             3 => 
             array (
@@ -65,7 +65,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://img.20mn.fr/2c2xoZqdQhu84Dmhb8ci9Sk/1200x768_le-berger-australien-est-le-chien-prefere-des-francais',
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
-                'partner_id' => 4,
+                'partner_id' => 1,
             ),
             4 => 
             array (
@@ -77,7 +77,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://img.20mn.fr/2c2xoZqdQhu84Dmhb8ci9Sk/1200x768_le-berger-australien-est-le-chien-prefere-des-francais',
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
-                'partner_id' => 5,
+                'partner_id' => 1,
             ),
             5 => 
             array (
@@ -89,7 +89,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://img.20mn.fr/2c2xoZqdQhu84Dmhb8ci9Sk/1200x768_le-berger-australien-est-le-chien-prefere-des-francais',
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
-                'partner_id' => 6,
+                'partner_id' => 1,
             ),
             6 => 
             array (
@@ -101,7 +101,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://img.20mn.fr/2c2xoZqdQhu84Dmhb8ci9Sk/1200x768_le-berger-australien-est-le-chien-prefere-des-francais',
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
-                'partner_id' => 7,
+                'partner_id' => 1,
             ),
             7 => 
             array (
@@ -113,7 +113,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://img.20mn.fr/2c2xoZqdQhu84Dmhb8ci9Sk/1200x768_le-berger-australien-est-le-chien-prefere-des-francais',
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
-                'partner_id' => 8,
+                'partner_id' => 1,
             ),
             8 => 
             array (
@@ -125,7 +125,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://img.20mn.fr/2c2xoZqdQhu84Dmhb8ci9Sk/1200x768_le-berger-australien-est-le-chien-prefere-des-francais',
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
-                'partner_id' => 9,
+                'partner_id' => 1,
             ),
             9 => 
             array (
@@ -257,7 +257,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://img.20mn.fr/2c2xoZqdQhu84Dmhb8ci9Sk/1200x768_le-berger-australien-est-le-chien-prefere-des-francais',
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
-                'partner_id' => 20,
+                'partner_id' => 10,
             ),
             20 => 
             array (
@@ -269,7 +269,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://img.20mn.fr/2c2xoZqdQhu84Dmhb8ci9Sk/1200x768_le-berger-australien-est-le-chien-prefere-des-francais',
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
-                'partner_id' => 21,
+                'partner_id' => 11,
             ),
             21 => 
             array (
@@ -281,7 +281,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://img.20mn.fr/2c2xoZqdQhu84Dmhb8ci9Sk/1200x768_le-berger-australien-est-le-chien-prefere-des-francais',
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
-                'partner_id' => 22,
+                'partner_id' => 12,
             ),
             22 => 
             array (
@@ -293,7 +293,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://img.20mn.fr/2c2xoZqdQhu84Dmhb8ci9Sk/1200x768_le-berger-australien-est-le-chien-prefere-des-francais',
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
-                'partner_id' => 23,
+                'partner_id' => 13,
             ),
             23 => 
             array (
@@ -305,7 +305,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://img.20mn.fr/2c2xoZqdQhu84Dmhb8ci9Sk/1200x768_le-berger-australien-est-le-chien-prefere-des-francais',
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
-                'partner_id' => 24,
+                'partner_id' => 14,
             ),
             24 => 
             array (
@@ -317,7 +317,7 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://cdn.futura-sciences.com/buildsv6/images/largeoriginal/c/3/4/c3449c7cc8_49335_def-insecte-mariea-flickr.jpg',
                 'created_at' => '2023-09-03 12:26:53',
                 'updated_at' => '2023-09-03 12:26:53',
-                'partner_id' => 2,
+                'partner_id' => 1,
             ),
             25 => 
             array (
@@ -329,7 +329,19 @@ class ProductsTableSeeder extends Seeder
                 'image' => 'https://m.media-amazon.com/images/I/71amUHr6mCL.jpg',
                 'created_at' => '2023-09-03 16:05:40',
                 'updated_at' => '2023-09-03 16:05:40',
-                'partner_id' => 2,
+                'partner_id' => 1,
+            ),
+            26 => 
+            array (
+                'id' => 31,
+                'name' => 'Boite',
+                'description' => 'Carré et brun',
+                'price' => '0.20',
+                'discount' => 0,
+                'image' => 'https://www.bureauengros.com/cdn/shop/products/070eba8837d300e3d12e96ef5d0e832c3f62c526_square426298_1_1b409ce8-3436-4be3-a28c-50eb9fdaef23_1000x.jpg?v=1689960774',
+                'created_at' => '2023-09-06 22:13:28',
+                'updated_at' => '2023-09-06 22:13:28',
+                'partner_id' => 1,
             ),
         ));
         

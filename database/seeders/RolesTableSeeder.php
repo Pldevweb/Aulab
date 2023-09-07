@@ -23,17 +23,9 @@ class RolesTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'name' => 'admin',
-                'display_name' => 'Administrateur',
-                'created_at' => '2023-09-02 12:04:47',
-                'updated_at' => '2023-09-02 12:04:47',
-            ),
-            1 => 
-            array (
-                'id' => 2,
-                'name' => 'user',
-                'display_name' => 'Utilisateur standard',
-                'created_at' => '2023-09-02 12:04:47',
-                'updated_at' => '2023-09-02 12:04:47',
+                'display_name' => 'Administrator',
+                'created_at' => '2023-09-06 22:02:29',
+                'updated_at' => '2023-09-06 22:02:29',
             ),
         ));
         

@@ -10,7 +10,7 @@
             @foreach ($articles as $article)
                 <div class="bg-[#f8f8f8] rounded-lg shadow-md p-6">
                     <h2 class="text-base font-semibold mb-2 text-[#5e5e4a]">{{ $article->title }}</h2>
-                    <img src="{{ $article->thumbnail }}" alt="{{ $article->title }}" class="mb-2">
+                    <img src="storage/{{ $article->thumbnail }}" alt="{{ $article->title }}" class="mb-2">
                     <p class="text-sm text-[#5e5e4a] text-justify">{{ substr($article->content, 0, 100) . (strlen($article->content) > 100 ? '...' : '') }}</p>
                 </div>
             @endforeach

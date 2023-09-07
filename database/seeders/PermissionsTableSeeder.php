@@ -299,6 +299,46 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2023-09-02 13:23:47',
                 'updated_at' => '2023-09-02 13:23:47',
             ),
+            35 => 
+            array (
+                'id' => 36,
+                'key' => 'browse_articles',
+                'table_name' => 'articles',
+                'created_at' => '2023-09-06 22:26:35',
+                'updated_at' => '2023-09-06 22:26:35',
+            ),
+            36 => 
+            array (
+                'id' => 37,
+                'key' => 'read_articles',
+                'table_name' => 'articles',
+                'created_at' => '2023-09-06 22:26:35',
+                'updated_at' => '2023-09-06 22:26:35',
+            ),
+            37 => 
+            array (
+                'id' => 38,
+                'key' => 'edit_articles',
+                'table_name' => 'articles',
+                'created_at' => '2023-09-06 22:26:35',
+                'updated_at' => '2023-09-06 22:26:35',
+            ),
+            38 => 
+            array (
+                'id' => 39,
+                'key' => 'add_articles',
+                'table_name' => 'articles',
+                'created_at' => '2023-09-06 22:26:35',
+                'updated_at' => '2023-09-06 22:26:35',
+            ),
+            39 => 
+            array (
+                'id' => 40,
+                'key' => 'delete_articles',
+                'table_name' => 'articles',
+                'created_at' => '2023-09-06 22:26:35',
+                'updated_at' => '2023-09-06 22:26:35',
+            ),
         ));
         
         

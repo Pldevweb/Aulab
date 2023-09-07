@@ -20,7 +20,7 @@ Artisan::command('inspire', function () {
 
 Artisan::command('vgen-seed', function () {
     $this->call('iseed', [
-        'tables' => 'data_types,data_rows,categories,products,posts,pages,menus,menu_items,roles,users,user_roles,permissions,permission_role,settings',
+        'tables' => 'data_types,data_rows,categories,products,articles,menus,menu_items,roles,users,user_roles,permissions,permission_role,settings',
         '--force' => true,
     ]);
 })->describe('Syncs seeders for Voyager');

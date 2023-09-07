@@ -56,8 +56,8 @@
     <div x-data="{ dropdownMenu: false }" class="relative" @click.away="dropdownMenu = false">
         <button @click="dropdownMenu = ! dropdownMenu"
             class="flex justify-end items-end p-2 bg-white rounded-md focus:outline-none hover:opacity-90 opacity-100">
-            @if (Auth::user()->profile_photo)
-                <img src="{{ asset(Auth::user()->profile_photo) }}" alt="Profile Photo"
+            @if (Auth::user()->avatar)
+                <img src="{{ asset(Auth::user()->avatar) }}" alt="Profile Photo"
                     class="p-1 h-10 w-10 rounded-full object-cover">
             @else
                 <span class="bg-[#5e5e4a] p-1 h-8 w-8 rounded-full">
