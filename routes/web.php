@@ -13,6 +13,8 @@ use App\Http\Livewire\Auth\Register;
 use App\Http\Livewire\Auth\Verify;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ArticleController;
+use TCG\Voyager\Facades\Voyager;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,14 +33,17 @@ Route::get('/', function () {
 
 Route::view('about', 'about')
 ->name('about');
-Route::view('blog', 'blog')
-->name('blog');
+
+Route::get('/blog', [ArticleController::class, 'index'])
+    ->name('blog');
 
 Route::view('contact', 'contact')
 ->name('contact');
 
 Route::view('partners', 'partners')
 ->name('partners');
+
+Route::get('products/{categorie}', [ProductController::class, 'showProductsByCategorie'])->name('productsbycategorie');
 
 Route::resource('products', ProductController::class);
 
@@ -73,3 +78,9 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', LogoutController::class)
         ->name('logout');
 });
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+

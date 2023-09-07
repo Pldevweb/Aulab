@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link rel="stylesheet" type="text/css" href="storage/css/styles.css">
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         <title>AULAB</title>
 
@@ -16,7 +15,7 @@
             <x-header></x-header>
         </header>
         <main class="min-h-screen flex items-center justify-center">
-            <div class="flex items-center bg-white flex-col w-4/6 m-3">
+            <div class="min-h-screen flex items-center bg-white flex-col w-screen md:w-4/6 min-[3440px]:w-2/5 m-3">
                 @yield('content')
             </div>
         </main>
