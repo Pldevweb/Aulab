@@ -319,6 +319,18 @@ class ProductsTableSeeder extends Seeder
                 'updated_at' => '2023-09-07 01:01:48',
                 'partner_id' => 1,
             ),
+            25 => 
+            array (
+                'id' => 33,
+                'name' => 'Pier-Luc Lemay',
+                'description' => 'test',
+                'price' => '3.99',
+                'discount' => 10,
+                'image' => 'products\\September2023\\vlDX3r88XsPsluoKl6du.jpeg',
+                'created_at' => '2023-09-07 23:45:54',
+                'updated_at' => '2023-09-07 23:45:54',
+                'partner_id' => 1,
+            ),
         ));
         
         

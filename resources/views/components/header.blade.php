@@ -12,7 +12,8 @@
     <div class="w-11/12 md:w-1/4 flex items-center justify-center">
         <form class="flex items-center content-stretch">
             <label for="simple-search" class="sr-only">Search</label>
-            <input class="h-7 w-3/4 md:w-56 border-none p-1 text-sm bg-[#f2f2f1] placeholder-[#cbcbc6] placeholder:italic"
+            <input
+                class="h-7 w-3/4 md:w-56 border-none p-1 text-sm bg-[#f2f2f1] placeholder-[#cbcbc6] placeholder:italic"
                 type="text" id="simple-search" placeholder="Rechercher..." required>
             <button type="submit" class="bg-[#d5d5d0] p-1 h-7 text-[#90908c]">
                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -35,8 +36,7 @@
                         </span>
                     </button>
                     <template x-if="true">
-                        <div x-show="dropdownMenu"
-                            class="absolute right-0 py-2 mt-2 bg-white rounded-md shadow-xl w-44">
+                        <div x-show="dropdownMenu" class="absolute right-0 py-2 mt-2 bg-white rounded-md shadow-xl w-44">
                             <a href="{{ route('login') }}"
                                 class="block px-4 py-2 text-sm text-gray-300 hover:bg-button hover:text-white"
                                 role="button" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -72,17 +72,16 @@
                 <div class="block px-4 py-2 text-sm text-center font-semibold text-[#656553]">
                     {{ __('messages.Bienvenue') }} {{ Auth::user()->name }} !
                 </div>
-                <hr/>
-                @if (Auth::user()->role_id == 1)
+                <hr />
+                @if (Auth::user()->role_id == 1 || Auth::user()->role_id == 3)
                     <a href="{{ route('voyager.dashboard') }}"
                         class="block px-4 py-2 text-sm text-main-color hover:bg-[#ededed] hover:text-[#808073]"
                         role="button" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ __('messages.Panneau_administrateur') }}
                     </a>
                 @endif
-                <hr/>
-                <a href="#"
-                    class="block px-4 py-2 text-sm text-main-color hover:bg-[#ededed] hover:text-[#808073]"
+                <hr />
+                <a href="#" class="block px-4 py-2 text-sm text-main-color hover:bg-[#ededed] hover:text-[#808073]"
                     role="button" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ __('messages.Editer_mon_profil') }}
                 </a>
@@ -103,7 +102,8 @@
 </div>
 </div>
 <nav class="w-full flex flex-wrap items-center justify-between mx-auto p-1 bg-[#c1c1ba]">
-    <ul class="mx-auto flex flex-col font-medium border-0 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 text-sm">
+    <ul
+        class="mx-auto flex flex-col font-medium border-0 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 text-sm">
         <li>
             <a href="{{ url('/') }}"
                 class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">

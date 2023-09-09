@@ -67,6 +67,14 @@ class CategoriesTableSeeder extends Seeder
                 'created_at' => '2023-08-31 21:26:24',
                 'updated_at' => '2023-08-31 21:26:24',
             ),
+            6 => 
+            array (
+                'id' => 9,
+                'name' => 'boite',
+                'slug' => 'boite',
+                'created_at' => '2023-09-07 23:37:34',
+                'updated_at' => '2023-09-07 23:37:34',
+            ),
         ));
         
         
