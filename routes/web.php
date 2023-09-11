@@ -31,11 +31,14 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::view('editprofile', 'editprofile')
+->name('editprofile');
+
 Route::view('about', 'about')
 ->name('about');
 
 Route::get('/blog', [ArticleController::class, 'index'])
-    ->name('blog');
+->name('blog');
 
 Route::view('contact', 'contact')
 ->name('contact');

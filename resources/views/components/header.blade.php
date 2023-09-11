@@ -81,8 +81,9 @@
                     </a>
                 @endif
                 <hr />
-                <a href="#" class="block px-4 py-2 text-sm text-main-color hover:bg-[#ededed] hover:text-[#808073]"
-                    role="button" aria-haspopup="true" aria-expanded="false" v-pre>
+                <a href="{{ route('editprofile') }}"
+                    class="block px-4 py-2 text-sm text-main-color hover:bg-[#ededed] hover:text-[#808073]" role="button"
+                    aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ __('messages.Editer_mon_profil') }}
                 </a>
                 <a href="{{ route('logout') }}"
