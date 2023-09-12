@@ -78,8 +78,8 @@ class DataTypesTableSeeder extends Seeder
                 'id' => 5,
                 'name' => 'products',
                 'slug' => 'products',
-                'display_name_singular' => 'Product',
-                'display_name_plural' => 'Products',
+                'display_name_singular' => 'Produit',
+                'display_name_plural' => 'Produits',
                 'icon' => NULL,
                 'model_name' => 'App\\Models\\Product',
                 'policy_name' => NULL,
@@ -89,7 +89,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2023-09-02 13:01:59',
-                'updated_at' => '2023-09-07 23:45:04',
+                'updated_at' => '2023-09-11 21:33:16',
             ),
             4 => 
             array (

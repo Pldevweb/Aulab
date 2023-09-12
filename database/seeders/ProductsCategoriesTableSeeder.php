@@ -23,14 +23,7 @@ class ProductsCategoriesTableSeeder extends Seeder
             array (
                 'created_at' => NULL,
                 'updated_at' => NULL,
-                'product_id' => 31,
-                'categorie_id' => 1,
-            ),
-            1 => 
-            array (
-                'created_at' => NULL,
-                'updated_at' => NULL,
-                'product_id' => 33,
+                'product_id' => 1,
                 'categorie_id' => 1,
             ),
         ));

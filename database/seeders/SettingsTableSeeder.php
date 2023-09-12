@@ -123,7 +123,7 @@ class SettingsTableSeeder extends Seeder
                 'id' => 10,
                 'key' => 'admin.google_analytics_client_id',
             'display_name' => 'Google Analytics ID Client (Utilisé pour le panneau d\'administration)',
-                'value' => NULL,
+                'value' => '128459760102-gfbdkgum8fmjif0f6b5rc4g11fpjmp6r.apps.googleusercontent.com',
                 'details' => '',
                 'type' => 'text',
                 'order' => 1,

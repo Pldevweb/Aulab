@@ -18,16 +18,11 @@ class VoyagerDatabaseSeeder extends Seeder
             DataRowsTableSeeder::class,
             MenusTableSeeder::class,
             MenuItemsTableSeeder::class,
-            // RolesTableSeeder::class,
+            UserRolesTableSeeder::class,
+            RolesTableSeeder::class,
             PermissionsTableSeeder::class,
-            // PermissionRoleTableSeeder::class,
-            SettingsTableSeeder::class,
-            // UsersTableSeeder::class,
-            // UserRolesTableSeeder::class,
-            // PostsTableSeeder::class,
-            // PagesTableSeeder::class,
-            CategoriesTableSeeder::class,
-            ProductsTableSeeder::class,
+            PermissionRoleTableSeeder::class,
+            SettingsTableSeeder::class
         ]);
     }
 }
