@@ -488,7 +488,7 @@ class DataRowsTableSeeder extends Seeder
                 'id' => 30,
                 'data_type_id' => 5,
                 'field' => 'partner_id',
-                'type' => 'select_dropdown',
+                'type' => 'hidden',
                 'display_name' => 'Partenaire',
                 'required' => 1,
                 'browse' => 1,

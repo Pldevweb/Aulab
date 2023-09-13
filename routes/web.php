@@ -14,6 +14,7 @@ use App\Http\Livewire\Auth\Verify;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\AvatarController;
 use TCG\Voyager\Facades\Voyager;
 
 /*
@@ -86,4 +87,7 @@ Route::middleware('auth')->group(function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::resource('/avatar', AvatarController::class);
+
 

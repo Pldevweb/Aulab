@@ -73,7 +73,7 @@
                     {{ __('messages.Bienvenue') }} {{ Auth::user()->name }} !
                 </div>
                 <hr />
-                @if (Auth::user()->role_id == 1 || Auth::user()->role_id == 3)
+                @if (Auth::user()->role_id == 1 || Auth::user()->role_id == 2)
                     <a href="{{ route('voyager.dashboard') }}"
                         class="block px-4 py-2 text-sm text-main-color hover:bg-[#ededed] hover:text-[#808073]"
                         role="button" aria-haspopup="true" aria-expanded="false" v-pre>
