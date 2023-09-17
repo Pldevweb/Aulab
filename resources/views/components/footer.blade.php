@@ -1,93 +1,92 @@
-<footer class="relative bottom-0">
-    <div>
-        <div class="bg-[#cdcdc8] text-[#5e5e4a] px-72 py-5 grid grid-cols-4 grid-rows-1 gap-x-5">
+    <div class="flex flex-col justify-center">
+        <div class="bg-footer text-main-color px-20 py-5 md:px-72 md:py-5 md:grid md:grid-cols-4 md:grid-rows-1 md:gap-x-5">
             <div>
-                <h2 class="uppercase">La boutique</h2>
-                <p class="text-xs text-justify">
+                <h2 class="uppercase">{{ __('messages.La_boutique') }}</h2>
+                <p class="text-sm text-justify">
                 <ul>
                     @foreach ($categories as $categorie)
-                        <li class="text-xs"><a href="">{{ $categorie->name }}</a></li>
+                        <li class="text-sm"><a href="{{ route('productsbycategorie', $categorie->slug) }}">{{ $categorie->name }}</a></li>
                     @endforeach
                 </ul>
                 </p>
             </div>
             <div>
-                <h2 class="uppercase">Informations</h2>
-                <p class="text-xs text-justify">
+                <h2 class="uppercase">{{ __('messages.Informations') }}</h2>
+                <p class="text-sm text-justify">
                 <ul>
-                    <li class="text-xs">
-                        <a href="">
-                            À propos
+                    <li class="text-sm">
+                        <a href="/about">
+                            {{ __('messages.A_propos') }}
                         </a>
                     </li>
-                    <li class="text-xs">
-                        <a href="">
-                            Nos partenaires
+                    <li class="text-sm">
+                        <a href="/partners">
+                            {{ __('messages.Nos_partenaires') }}
                         </a>
                     </li>
-                    <li class="text-xs">
+                    <li class="text-sm">
                         <a href="">
-                            Politique de livraison
+                            {{ __('messages.Politique_livraison') }}
                         </a>
                     </li>
-                    <li class="text-xs">
+                    <li class="text-sm">
                         <a href="">
-                            Foire aux questions
+                            {{ __('messages.FAQ') }}
                         </a>
                     </li>
-                    <li class="text-xs">
-                        <a href="">
-                            Contactez-nous
+                    <li class="text-sm">
+                        <a href="/contact">
+                            {{ __('messages.Contactez_nous') }}
                         </a>
                     </li>
                 </ul>
                 </p>
             </div>
             <div>
-                <h2 class="uppercase">Mon compte</h2>
-                <p class="text-xs text-justify">
+                <h2 class="uppercase">{{ __('messages.Mon_compte') }}</h2>
+                <p class="text-sm text-justify">
                 <ul>
-                    <li class="text-xs">
+                    <li class="text-sm">
                         <a href="">
-                            Mes commandes
+                            {{ __('messages.Mes_commandes') }}
                         </a>
                     </li>
-                    <li class="text-xs">
+                    <li class="text-sm">
                         <a href="">
-                            Mes adresses
+                            {{ __(('messages.Mes_adresses')) }}
                         </a>
                     </li>
-                    <li class="text-xs">
+                    <li class="text-sm">
                         <a href="">
-                            Mes informations personnelles
+                            {{ __('messages.Mes_informations_personnelles') }}
                         </a>
                     </li>
                 </ul>
                 </p>
             </div>
             <div>
-                <h2 class="uppercase">Nous contacter</h2>
-                <p class="text-xs text-justify">
+                <h2 class="uppercase">{{ __('messages.Nous_contacter') }}</h2>
+                <p class="text-sm text-justify">
                 <ul>
-                    <li class="text-xs">
+                    <li class="text-sm">
                         <i class="fa-solid fa-phone"></i> 000-0000
                     </li>
-                    <li class="text-xs">
+                    <li class="text-sm">
                         <i class="fa-solid fa-envelope"></i> email@email.com
                     </li>
                 </ul>
                 </p>
             </div>
         </div>
-        <div class="bg-[#c1c1ba] flex justify-center">
+        <div class="bg-footer-2 flex justify-center">
             <div class="grid grid-cols-[2fr_3fr_1fr] w-3/5">
                 <div>
-                    <p class="m-1 p-1 text-[#5e5e4a] text-xs">
-                        Copyright @ 2023 Aulab. Tous droits réservés.<br />
-                        Site web par Danyka Enair et Pier-Luc Lemay
+                    <p class="m-1 md:p-1 text-main-color text-sm">
+                        Copyright @ 2023 Aulab. {{ __('messages.Tous_droits_reserves') }}<br />
+                        {{ __('messages.Site_web_par') }}
                     </p>
                 </div>
-                <div class="m-1 p-1 text-[#5e5e4a] text-xs grid grid-cols-[1fr_1fr_10fr] flex items-center">
+                <div class="m-1 p-1 text-main-color text-sm grid grid-cols-[1fr_1fr_10fr]">
                     <div class="bg-white w-8 h-6 flex items-center">
                         <img src="{{ asset('storage/images/mastercard.png') }}" class="p-1" />
                     </div>
@@ -98,13 +97,12 @@
                         <img src="{{ asset('storage/images/paypal.png') }}" class="p-1" />
                     </div>
                 </div>
-                <div class="text-[#5e5e4a] text-xs flex items-center justify-end">
+                <div class="text-main-color text-lg flex items-center justify-end">
                     <button x-on:click="window.scrollTo({ top: 0, behavior: 'smooth' })"
-                        class="bg-[#5e5e4a] p-1 m-1 h-8 w-8 rounded-full text-sm focus:outline-none">
+                        class="bg-button p-1 m-1 h-8 w-8 rounded-full text-sm focus:outline-none">
                         <i class="fa-solid fa-arrow-up text-white"></i>
                     </button>
                 </div>
             </div>
         </div>
     </div>
-</footer>

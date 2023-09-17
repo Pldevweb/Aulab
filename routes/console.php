@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
+
+Artisan::command('vgen-seed', function () {
+    $this->call('iseed', [
+        'tables' => 'data_types,data_rows,categories,partners,products,products_categories,articles,menus,menu_items,roles,users,user_roles,permissions,permission_role,settings',
+        '--force' => true,
+    ]);
+})->describe('Syncs seeders for Voyager');
