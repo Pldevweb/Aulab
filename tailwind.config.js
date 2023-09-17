@@ -16,6 +16,7 @@ module.exports = {
                 'accueil': "url('/storage/app/public/images/accueilimg.jpg')",
             }),
             backgroundColor: {
+                'body': '#DBDBD8',
                 'card': '#f8f8f8',
                 'footer': '#cdcdc8',
                 'footer-2': '#c1c1ba',

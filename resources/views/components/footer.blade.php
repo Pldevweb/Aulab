@@ -1,5 +1,5 @@
     <div class="flex flex-col justify-center">
-        <div class="bg-footer text-main-color px-72 py-5 grid grid-cols-4 grid-rows-1 gap-x-5">
+        <div class="bg-footer text-main-color px-20 py-5 md:px-72 md:py-5 md:grid md:grid-cols-4 md:grid-rows-1 md:gap-x-5">
             <div>
                 <h2 class="uppercase">{{ __('messages.La_boutique') }}</h2>
                 <p class="text-sm text-justify">
@@ -81,7 +81,7 @@
         <div class="bg-footer-2 flex justify-center">
             <div class="grid grid-cols-[2fr_3fr_1fr] w-3/5">
                 <div>
-                    <p class="m-1 p-1 text-main-color text-sm">
+                    <p class="m-1 md:p-1 text-main-color text-sm">
                         Copyright @ 2023 Aulab. {{ __('messages.Tous_droits_reserves') }}<br />
                         {{ __('messages.Site_web_par') }}
                     </p>
