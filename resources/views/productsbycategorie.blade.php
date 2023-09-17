@@ -20,7 +20,7 @@
         </div>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             @foreach ($categorieModel->products as $product)
-                <div class="bg-card rounded-lg shadow-md p-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
                     <h2 class="text-xl font-semibold mb-2 text-main-color">{{ $product->name }}</h2>
                     <p class="text-main-color">
                         {{ substr($product->description, 0, 100) }}{{ strlen($product->description) > 100 ? '...' : '' }}

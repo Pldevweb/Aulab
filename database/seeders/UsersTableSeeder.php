@@ -14,9 +14,8 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        
-
         \DB::table('users')->delete();
+
         
         \DB::table('users')->insert(array (
             0 => 
@@ -74,7 +73,5 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => '2023-09-16 18:45:13',
             ),
         ));
-        
-        
     }
 }
