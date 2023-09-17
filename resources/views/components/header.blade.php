@@ -112,7 +112,7 @@
             </a>
         </li>
         <li>
-            <a href="{{ url('/products') }}"
+            <a href="{{ url('/produits-pour-chiens') }}"
                 class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
                 {{ __('messages.Boutique') }}
             </a>

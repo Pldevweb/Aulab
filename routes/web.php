@@ -47,9 +47,14 @@ Route::view('contact', 'contact')
 Route::view('partners', 'partners')
 ->name('partners');
 
-Route::get('products/{categorie}', [ProductController::class, 'showProductsByCategorie'])->name('productsbycategorie');
+Route::get('produits-pour-chiens/{categorie}', [ProductController::class, 'showProductsByCategorie'])->name('productsbycategorie');
 
-Route::resource('products', ProductController::class);
+Route::get('produits-pour-chiens/{categorie}/{name}', [ProductController::class, 'showProductDetails'])->name('productDetails');
+
+
+Route::resource('produits-pour-chiens', ProductController::class);
+
+
 
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)

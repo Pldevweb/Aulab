@@ -89,7 +89,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2023-09-02 13:01:59',
-                'updated_at' => '2023-09-12 13:39:40',
+                'updated_at' => '2023-09-14 20:27:29',
             ),
             4 => 
             array (
@@ -125,7 +125,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":"id","order_display_column":"id","order_direction":"asc","default_search_key":"title","scope":null}',
                 'created_at' => '2023-09-06 22:26:35',
-                'updated_at' => '2023-09-06 22:38:59',
+                'updated_at' => '2023-09-14 20:21:29',
             ),
         ));
         

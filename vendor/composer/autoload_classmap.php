@@ -6538,6 +6538,7 @@ return array(
     'TCG\\Voyager\\Alert\\Components\\TitleComponent' => $vendorDir . '/tcg/voyager/src/Alert/Components/TitleComponent.php',
     'TCG\\Voyager\\Commands\\AdminCommand' => $vendorDir . '/tcg/voyager/src/Commands/AdminCommand.php',
     'TCG\\Voyager\\Commands\\ControllersCommand' => $vendorDir . '/tcg/voyager/src/Commands/ControllersCommand.php',
+    'TCG\\Voyager\\Commands\\DevCommand' => $vendorDir . '/tcg/voyager/src/Commands/DevCommand.php',
     'TCG\\Voyager\\Commands\\InstallCommand' => $vendorDir . '/tcg/voyager/src/Commands/InstallCommand.php',
     'TCG\\Voyager\\Commands\\MakeModelCommand' => $vendorDir . '/tcg/voyager/src/Commands/MakeModelCommand.php',
     'TCG\\Voyager\\Contracts\\User' => $vendorDir . '/tcg/voyager/src/Contracts/User.php',
