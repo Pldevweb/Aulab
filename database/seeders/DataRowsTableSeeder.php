@@ -465,7 +465,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 8,
+                'order' => 11,
             ),
             28 => 
             array (
@@ -481,7 +481,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 9,
+                'order' => 10,
             ),
             29 => 
             array (
@@ -490,7 +490,7 @@ class DataRowsTableSeeder extends Seeder
                 'field' => 'partner_id',
                 'type' => 'hidden',
                 'display_name' => 'Partenaire',
-                'required' => 1,
+                'required' => 0,
                 'browse' => 1,
                 'read' => 1,
                 'edit' => 1,
@@ -593,7 +593,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"model":"App\\\\Models\\\\Categorie","table":"categories","type":"belongsToMany","column":"id","key":"id","label":"name","pivot_table":"products_categories","pivot":"1","taggable":"0"}',
-                'order' => 10,
+                'order' => 8,
             ),
             36 => 
             array (
@@ -632,7 +632,7 @@ class DataRowsTableSeeder extends Seeder
                 'id' => 40,
                 'data_type_id' => 7,
                 'field' => 'thumbnail',
-                'type' => 'media_picker',
+                'type' => 'image',
                 'display_name' => 'Thumbnail',
                 'required' => 0,
                 'browse' => 1,
@@ -696,7 +696,7 @@ class DataRowsTableSeeder extends Seeder
                 'id' => 44,
                 'data_type_id' => 7,
                 'field' => 'user_id',
-                'type' => 'number',
+                'type' => 'hidden',
                 'display_name' => 'User Id',
                 'required' => 1,
                 'browse' => 1,
@@ -721,7 +721,23 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"model":"App\\\\Models\\\\Partner","table":"partners","type":"belongsTo","column":"partner_id","key":"id","label":"name","pivot_table":"articles","pivot":"0","taggable":"0"}',
-                'order' => 11,
+                'order' => 9,
+            ),
+            44 => 
+            array (
+                'id' => 48,
+                'data_type_id' => 7,
+                'field' => 'article_belongsto_user_relationship',
+                'type' => 'relationship',
+                'display_name' => 'Auteur de l\'article',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"model":"App\\\\Models\\\\User","table":"users","type":"belongsTo","column":"user_id","key":"id","label":"name","pivot_table":"articles","pivot":"0","taggable":"0"}',
+                'order' => 8,
             ),
         ));
         

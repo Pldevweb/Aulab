@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-        <title>AULAB</title>
 
-        @extends('layouts.base')
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <title>AULAB</title>
 
+    @extends('layouts.base')
+</head>
     <body x-data class="bg-body">
         <header class="h-auto">
             <x-header></x-header>
