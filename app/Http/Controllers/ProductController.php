@@ -15,18 +15,35 @@ class ProductController extends Controller
     {
         $products = Product::with('categorie')->get();
         $categories = Categorie::all();
-
-        return view('products', compact('categories', 'products'));
+        return view('produits-pour-chiens', compact('categories', 'products'));
     }
 
     public function showProductsByCategorie($slug)
     {
         $categorieModel = Categorie::where('slug', $slug)->firstOrFail();
         $categories = Categorie::all();
+
+        foreach ($categories as $categorie) {
+            $categorie->isActive = $categorie->slug === $slug;
+        }
+
         $products = $categorieModel->products;
         return view('ProductsByCategorie', compact('products', 'categorieModel', 'categories'));
     }
 
+    public function showProductDetails($categorie, $name)
+{
+
+    $product = Product::where('name', $name)->first();
+
+    if (!$product) {
+        abort(404);
+    }
+
+    $categorie = Categorie::where('slug', $categorie)->first();
+
+    return view('productDetails', compact('product', 'categorie'));
+}
     /**
      * Show the form for creating a new resource.
      */
@@ -48,7 +65,7 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-       //
+      //
     }
 
     /**

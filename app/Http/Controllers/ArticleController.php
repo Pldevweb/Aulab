@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Article;
+use App\Models\Comment;
+use App\Models\User;
 
 class ArticleController extends Controller
 {
@@ -38,7 +40,9 @@ class ArticleController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $article = Article::findOrFail($id);
+
+        return view('article', ['article' => $article]);
     }
 
     /**

@@ -14,6 +14,8 @@ use App\Http\Livewire\Auth\Verify;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\AvatarController;
+use TCG\Voyager\Facades\Voyager;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,21 +32,32 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::view('editprofile', 'editprofile')
+->name('editprofile');
+
 Route::view('about', 'about')
 ->name('about');
-
-Route::get('/blog', [ArticleController::class, 'index'])
-    ->name('blog');
-
-Route::view('contact', 'contact')
-->name('contact');
 
 Route::view('partners', 'partners')
 ->name('partners');
 
-Route::get('products/{categorie}', [ProductController::class, 'showProductsByCategorie'])->name('productsbycategorie');
+Route::get('/blog', [ArticleController::class, 'index'])
+->name('blog');
 
-Route::resource('products', ProductController::class);
+Route::get('/blog/{id}', [ArticleController::class, 'show'])
+    ->name('article.show');
+
+Route::view('contact', 'contact')
+->name('contact');
+
+Route::get('produits-pour-chiens/{categorie}', [ProductController::class, 'showProductsByCategorie'])->name('productsbycategorie');
+
+Route::get('produits-pour-chiens/{categorie}/{name}', [ProductController::class, 'showProductDetails'])->name('productDetails');
+
+
+Route::resource('produits-pour-chiens', ProductController::class);
+
+
 
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)
@@ -77,3 +90,12 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', LogoutController::class)
         ->name('logout');
 });
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+
+Route::resource('/avatar', AvatarController::class);
+
+

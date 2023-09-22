@@ -3,18 +3,36 @@
 return [
     'Offres' => 'Offres en cours ici',
     'Bienvenue' => 'Bienvenue',
+    'Bienvenue_sur_aulab' => 'Bienvenue sur Aulab',
+    'Bonjour' => 'Bonjour',
     'Editer_mon_profil' => 'Editer mon profil',
+    'Panneau_administrateur' => 'Panneau administrateur',
 
     'Accueil' => 'Accueil',
     'Boutique' => 'Boutique',
     'Partenaire' => 'Partenaire',
     'Blog' => 'Blog',
-    'A_propos_dAulab' => 'A propos d\'Aulab',
+    'A_propos_dAulab' => 'À propos d\'Aulab',
     'Nous_contacter' => 'Nous contacter',
+    'La_boutique' => 'La boutique',
+    'Informations' => 'Informations',
+    'Mon_compte' => 'Mon compte',
+    'Les_articles' => 'Les articles',
 
     'Login' => 'Se connecter',
     'Logout' => 'Se déconnecter',
     'Register' => 'Créer un compte',
+
+    'A_propos' => 'À propos',
+    'Nos_partenaires' => 'Nos partenaires',
+    'Politique_livraison' => 'Politique de livraison',
+    'FAQ' => 'Foire aux questions',
+    'Contactez_nous' => 'Contactez-nous',
+    'Mes_commandes' => 'Mes commandes',
+    'Mes_adresses' => 'Mes adresses',
+    'Mes_informations_personnelles' => 'Mes informations personnelles',
+    'Tous_droits_reserves' => 'Tous droits réservés',
+    'Site_web_par' => 'Site web par Danyka Enair et Pier-Luc Lemay',
 
     'Introduction_p1' => 'Bienvenue dans notre boutique virtuelle d\'accessoires pour chiens ! Nous sommes fiers de vous offrir une gamme variée de produits haut de gamme pour répondre aux besoins de votre animal de compagnie.',
     'Introduction_p2' => 'Nous avons tout ce dont vous avez besoin pour rendre la vie de votre chien plus confortable et amusante.',
@@ -79,4 +97,30 @@ return [
     'Voir_nos_equipements' => 'Voir nos équipements',
 
     'Voir_tous_les_produits' => 'Voir tous les produits',
+
+    'Encore_plus' => 'Encore plus...',
+    'Le_comfort_de_la_maison' => 'Le confort de la maison',
+    'Le_comfort_de_la_maison_p1' => 'Il est important de prendre en compte l\'environnement et le confort de votre chien lorsque vous aménagez sa maison. Les chiens ont besoin d\'un espace propre et confortable pour se reposer et se détendre.',
+    'Le_comfort_de_la_maison_p2' => 'L\'environnement de la maison de votre chien doit être adapté à ses besoins spécifiques. Vous pouvez fournir un lit confortable, des couvertures douces et des jouets pour lui offrir un environnement agréable et relaxant.',
+    'Le_comfort_de_la_maison_p3' => 'En prenant en compte l\'environnement et le confort de votre chien, vous pouvez créer un espace idéal pour que votre animal de compagnie se sente en sécurité et heureux à la maison.',
+
+    'Besoins_essentiels' => 'Besoins essentiels et hygiène',
+    'Besoins_essentiels_p1' => 'Le toilettage est un élément essentiel pour la santé et le bien-être des chiens. Les propriétaires doivent veiller à maintenir une hygiène adéquate pour éviter les problèmes de peau, les infections et les parasites. Les services de toilettage comprennent le brossage, la coupe de griffes, le nettoyage des oreilles et le bain.',
+    'Besoins_essentiels_p2' => 'Nous proposons également une gamme de supplément et produits naturels pour votre chien, vous trouverez tout pour maintenir sa santé et son bien-être général.',
+
+    'Le_destructeur' => 'Le destructeur',
+    'Le_destructeur_p1' => 'Les chiens ont naturellement un besoin de mâcher et de détruire des objets. Pour éviter que votre chien ne s\'en prenne à vos meubles et à vos chaussures, il est important de lui fournir des accessoires appropriés pour mâcher et détruire.',
+    'Le_destructeur_p2' => 'Les accessoires pour chien destructeurs comprennent des jouets en caoutchouc résistants, des os en cuir brut et des bâtons à mâcher. Ces jouets sont conçus pour résister aux morsures et aux griffures des chiens, tout en les occupant et en les amusant.',
+    'Le_destructeur_p3' => 'En choisissant les bons accessoires pour votre chien, vous pouvez aider à satisfaire son besoin naturel de mâcher et de détruire, tout en préservant vos biens personnels et en favorisant sa santé dentaire.',
+
+    'Faire_un_don' => 'Faire un don',
+    'Faire_un_don_p1' => 'Nous sommes fiers d\'annoncer que 1% de nos profits iront à la S.P.A. de l\'Estrie pour soutenir leur travail admirable en faveur des animaux. La S.P.A. de l\'Estrie est une organisation sans but lucratif qui s\'occupe de recueillir, soigner et trouver des foyers aimants pour les animaux abandonnés ou maltraités dans la région de l\'Estrie.',
+    'Faire_un_don_p2' => 'Dans  notre entreprise, nous avons à cœur de soutenir les organisations qui œuvrent pour le bien-être des animaux, car nous savons que leur travail est essentiel pour assurer la protection et le respect des animaux.',
+    'Faire_un_don_p3' => 'En apportant notre soutien, nous espérons contribuer à améliorer la vie des animaux dans notre communauté et à sensibiliser le public à leur cause. Nous encourageons nos clients à en faire autant en faisant un don ou en adoptant un animal auprès du refuge.',
+
+    'Envoyer' => 'Envoyer',
+    'Envoyer_une_copie' => 'Envoyez-moi une copie de ce message.',
+
+    'En_lire_davantage' => 'En lire d\'avantage',
+    'Publie_le' => 'Publié le',
 ];
