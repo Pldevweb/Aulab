@@ -15,34 +15,54 @@ class ProductController extends Controller
     {
         $products = Product::with('categorie')->get();
         $categories = Categorie::all();
-        return view('produits-pour-chiens', compact('categories', 'products'));
+        $totalProductsCount = Product::count();
+
+        return view('produits-pour-chiens', compact('categories', 'products', 'totalProductsCount'));
     }
+
 
     public function showProductsByCategorie($slug)
     {
         $categorieModel = Categorie::where('slug', $slug)->firstOrFail();
         $categories = Categorie::all();
+        $totalProductsCount = Product::count();
 
         foreach ($categories as $categorie) {
             $categorie->isActive = $categorie->slug === $slug;
         }
-
         $products = $categorieModel->products;
-        return view('ProductsByCategorie', compact('products', 'categorieModel', 'categories'));
+        return view('ProductsByCategorie', compact('products', 'categorieModel', 'categories', 'totalProductsCount'));
     }
     public function showProductDetails($categorie, $name)
-{
+    {
 
-    $product = Product::where('name', $name)->first();
+        $product = Product::where('name', $name)->first();
 
-    if (!$product) {
-        abort(404);
+        if (!$product) {
+            abort(404);
+        }
+
+        $categorie = Categorie::where('slug', $categorie)->first();
+
+        return view('productDetails', compact('product', 'categorie'));
+    }
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        $product = Product::where('name', 'like', "%$query%")
+            ->first();
+
+        if ($product) {
+
+            return view('productDetails', compact('product'));
+        } else {
+
+            return view('noResults');
+        }
     }
 
-    $categorie = Categorie::where('slug', $categorie)->first();
 
-    return view('productDetails', compact('product', 'categorie'));
-}
     /**
      * Show the form for creating a new resource.
      */
