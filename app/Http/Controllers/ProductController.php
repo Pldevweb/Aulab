@@ -33,6 +33,7 @@ class ProductController extends Controller
         $products = $categorieModel->products;
         return view('ProductsByCategorie', compact('products', 'categorieModel', 'categories', 'totalProductsCount'));
     }
+
     public function showProductDetails($categorie, $name)
     {
 

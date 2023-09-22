@@ -1,16 +1,81 @@
-<div class="w-full flex items-center justify-center bg-button font-sans h-7 p-2" id="navbar-user">
+<div class="w-full flex items-center justify-center bg-primary font-sans h-7 p-2" id="navbar-user">
     <a href="" class="text-white text-center font-sans text-sm uppercase">
         {{ __('messages.Offres') }}
     </a>
 </div>
 <div class="bg-white min-w-full flex items-center justify-center">
+    <div x-data="{ open: false }">
+        <button @click="open = !open"
+            class="md:hidden block px-2 py-1 text-menu-link rounded hover:bg-transparent hover:text-white focus:outline-none focus:ring focus:border-transparent">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div x-show="open"
+            class="md:hidden fixed top-0 left-0 w-full h-screen bg-black opacity-80 z-10">
+        </div>
+
+        <div x-show="open" @click.away="open = false" x-transition:enter="transform transition-transform ease-in-out duration-300"
+        x-transition:enter-start="-translate-x-full"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave="transform transition-transform ease-in-out duration-300"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="-translate-x-full"
+            class="md:hidden fixed top-0 left-0 w-10/12 h-screen z-10">
+
+            <button @click="open = false"
+                class="absolute top-0 left-full m-1 p-1 z-10 text-white rounded hover:bg-transparent hover:text-white focus:outline-none focus:ring focus:border-transparent">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <div class="fixed top-0 w-10/12 font-bold bg-primary text-white p-2 z-20">
+                {{ __('messages.Bonjour') }}, {{ Auth::user()->name }}
+            </div>
+
+            <ul class="fixed top-0 bg-[#c1c1ba] w-10/12 h-screen py-20 px-10 z-10">
+                <li>
+                    <a href="{{ url('/') }}" class="block text-menu-link hover:bg-transparent hover:text-white">
+                        {{ __('messages.Accueil') }}
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url('/produits-pour-chiens') }}" class="block text-menu-link hover:bg-transparent hover:text-white">
+                        {{ __('messages.Boutique') }}
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url('/partners') }}" class="block text-menu-link hover:bg-transparent hover:text-white">
+                        {{ __('messages.Partenaire') }}
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url('/blog') }}" class="block text-menu-link hover:bg-transparent hover:text-white">
+                        {{ __('messages.Blog') }}
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url('/about') }}" class="block text-menu-link hover:bg-transparent hover:text-white">
+                        {{ __('messages.A_propos_dAulab') }}
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url('/contact') }}" class="block text-menu-link hover:bg-transparent hover:text-white">
+                        {{ __('messages.Nous_contacter') }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div class="w-full md:w-2/4 flex items-start md:items-center justify-end">
         <a href="{{ url('/') }}">
             <img src="{{ asset('storage/images/LOGO.webp') }}" alt="Aulab Logo" />
         </a>
     </div>
-    <div class="w-11/12 md:w-1/4 flex items-center justify-center">
-        <form class="flex items-center content-stretch " action="{{ route('productSearch') }}" method="GET">
+
+    <div class="w-11/12 lg:w-1/4 flex items-center justify-center">
+        <form class="flex items-center content-stretch" action="{{ route('productSearch') }}" method="GET">
+
             <label for="simple-search" class="sr-only">Search</label>
             <input
                 class="h-7 w-3/4 md:w-56 border-none p-1 text-sm bg-[#f2f2f1] placeholder-[#cbcbc6] placeholder:italic"
@@ -102,42 +167,42 @@
 @endguest
 </div>
 </div>
-<nav class="w-full flex flex-wrap items-center justify-between mx-auto p-1 bg-[#c1c1ba]">
+<nav class="hidden md:w-full md:flex md:flex-wrap md:items-center md:justify-between md:mx-auto md:p-1 md:bg-[#c1c1ba]">
     <ul
         class="mx-auto flex flex-col font-medium border-0 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 text-sm">
         <li>
             <a href="{{ url('/') }}"
-                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
+                class="block md:py-1 md:px-4 text-menu-link rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
                 {{ __('messages.Accueil') }}
             </a>
         </li>
         <li>
             <a href="{{ url('/produits-pour-chiens') }}"
-                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
+                class="block md:py-1 md:px-4 text-menu-link rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
                 {{ __('messages.Boutique') }}
             </a>
         </li>
         <li>
             <a href="{{ url('/partners') }}"
-                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
+                class="block md:py-1 md:px-4 text-menu-link rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
                 {{ __('messages.Partenaire') }}
             </a>
         </li>
         <li>
             <a href="{{ url('/blog') }}"
-                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
+                class="block md:py-1 md:px-4 text-menu-link rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
                 {{ __('messages.Blog') }}
             </a>
         </li>
         <li>
             <a href="{{ url('/about') }}"
-                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
+                class="block md:py-1 md:px-4 text-menu-link rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
                 {{ __('messages.A_propos_dAulab') }}
             </a>
         </li>
         <li>
             <a href="{{ url('/contact') }}"
-                class="block md:py-1 md:px-4 text-[#6d6d5c] rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
+                class="block md:py-1 md:px-4 text-menu-link rounded md:hover:bg-transparent md:hover:text-white md:p-0 text-sm uppercase font-semibold">
                 {{ __('messages.Nous_contacter') }}
             </a>
         </li>

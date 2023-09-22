@@ -14,8 +14,9 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('users')->delete();
+        
 
+        \DB::table('users')->delete();
         
         \DB::table('users')->insert(array (
             0 => 
@@ -72,6 +73,26 @@ class UsersTableSeeder extends Seeder
                 'created_at' => '2023-09-14 21:41:06',
                 'updated_at' => '2023-09-16 18:45:13',
             ),
+            3 => 
+            array (
+                'id' => 4,
+                'role_id' => 2,
+                'name' => 'Danyka',
+                'email' => 'cutie@hotmail.com',
+                'avatar' => 'avatars/J2ZklzsPjHfwFB6v8ap7ogMJr128MiB15MKT02Yd.jpg',
+                'email_verified_at' => NULL,
+                'password' => '$2y$10$pgQh7OQuj0DckRV1tSUSg.SH23uYaLtcIpsoF5mKcfX5ivYZaTBJO',
+                'address' => NULL,
+                'city' => NULL,
+                'zipcode' => NULL,
+                'country' => NULL,
+                'remember_token' => 'pk5ZMXDeCs62l9W8HKRDrCbadVCV26SKWTkrPO6Lqn59SuTJLkVIq1R4A135',
+                'settings' => NULL,
+                'created_at' => '2023-09-17 21:41:57',
+                'updated_at' => '2023-09-18 14:08:44',
+            ),
         ));
+        
+        
     }
 }

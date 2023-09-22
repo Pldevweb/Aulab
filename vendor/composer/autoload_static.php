@@ -7125,7 +7125,6 @@ class ComposerStaticInite3cbcb377151b2afa8f6d2cd01013d66
         'TCG\\Voyager\\Alert\\Components\\TitleComponent' => __DIR__ . '/..' . '/tcg/voyager/src/Alert/Components/TitleComponent.php',
         'TCG\\Voyager\\Commands\\AdminCommand' => __DIR__ . '/..' . '/tcg/voyager/src/Commands/AdminCommand.php',
         'TCG\\Voyager\\Commands\\ControllersCommand' => __DIR__ . '/..' . '/tcg/voyager/src/Commands/ControllersCommand.php',
-        'TCG\\Voyager\\Commands\\DevCommand' => __DIR__ . '/..' . '/tcg/voyager/src/Commands/DevCommand.php',
         'TCG\\Voyager\\Commands\\InstallCommand' => __DIR__ . '/..' . '/tcg/voyager/src/Commands/InstallCommand.php',
         'TCG\\Voyager\\Commands\\MakeModelCommand' => __DIR__ . '/..' . '/tcg/voyager/src/Commands/MakeModelCommand.php',
         'TCG\\Voyager\\Contracts\\User' => __DIR__ . '/..' . '/tcg/voyager/src/Contracts/User.php',
