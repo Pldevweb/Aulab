@@ -38,14 +38,17 @@ Route::view('editprofile', 'editprofile')
 Route::view('about', 'about')
 ->name('about');
 
+Route::view('partners', 'partners')
+->name('partners');
+
 Route::get('/blog', [ArticleController::class, 'index'])
 ->name('blog');
 
+Route::get('/blog/{id}', [ArticleController::class, 'show'])
+    ->name('article.show');
+
 Route::view('contact', 'contact')
 ->name('contact');
-
-Route::view('partners', 'partners')
-->name('partners');
 
 Route::get('produits-pour-chiens/{categorie}', [ProductController::class, 'showProductsByCategorie'])->name('productsbycategorie');
 
