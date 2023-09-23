@@ -23,6 +23,7 @@
                             {{ $article->user->role->display_name }}
                         @endif
                     </div>
+
                     <a href="{{ route('article.show', ['id' => $article->id]) }}">
                         <div class="mt-5 group">
                             <h2 class="text-base font-semibold text-main-color group-hover:opacity-50">

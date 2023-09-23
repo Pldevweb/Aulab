@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <!-- SECTION 1 -->
 
 <!-- mobile/tablette -->
@@ -18,10 +19,12 @@
                     {{ __('messages.Introduction_p3') }}
                 </p>
                 <p class="text-base/loose leading-snug text-justify mt-3">
+
                     {{ __('messages.Introduction_p4') }}
                 </p>
             </div>
         </div>
+
 <!-- web -->
             <section class="hidden lg:block lg:w-5/6 lg:h-auto lg:mt-5 lg:bg-cover lg:bg-center lg:bg-accueil">
                 <div class="flex justify-end my-20">

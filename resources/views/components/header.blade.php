@@ -72,12 +72,14 @@
             <img src="{{ asset('storage/images/LOGO.webp') }}" alt="Aulab Logo" />
         </a>
     </div>
+
     <div class="w-11/12 lg:w-1/4 flex items-center justify-center">
-        <form class="flex items-center content-stretch">
+        <form class="flex items-center content-stretch" action="{{ route('productSearch') }}" method="GET">
+
             <label for="simple-search" class="sr-only">Search</label>
             <input
                 class="h-7 w-3/4 md:w-56 border-none p-1 text-sm bg-[#f2f2f1] placeholder-[#cbcbc6] placeholder:italic"
-                type="text" id="simple-search" placeholder="Rechercher..." required>
+                type="text" id="simple-search" name="query" placeholder="Rechercher..." required>
             <button type="submit" class="bg-[#d5d5d0] p-1 h-7 text-[#90908c]">
                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 20 20">
