@@ -30,7 +30,11 @@
             </button>
 
             <div class="fixed top-0 w-10/12 font-bold bg-primary text-white p-2 z-20">
-                {{ __('messages.Bonjour') }}, {{ Auth::user()->name }}
+                @auth
+                    {{ __('messages.Bienvenue') }}, {{ Auth::user()->name }}.
+                @else
+                    {{ __('messages.Bienvenue') }}, {{ __('messages.Invite') }}.
+                @endauth
             </div>
 
             <ul class="fixed top-0 bg-[#c1c1ba] w-10/12 h-screen py-20 px-10 z-10">
@@ -90,7 +94,10 @@
             </button>
         </form>
     </div>
-    <div class="flex justify-end w-1/3 px-10">
+    <div class="flex justify-end w-1/3 px-10 items-center">
+        <a href="{{ route('cart.index') }}" class="p-1 h-8 w-8 rounded-full">
+            <i class="fa-solid fa-cart-shopping text-button text-lg"></i>
+        </a>
         @guest
             @if (Route::has('login'))
                 <div x-data="{ dropdownMenu: false }" class="relative" @click.away="dropdownMenu = false">
@@ -135,7 +142,12 @@
             <div x-show="dropdownMenu"
                 class="absolute right-0 py-2 mt-2 rounded-md shadow-sm w-44 bg-card border-2 border-[#ededed]">
                 <div class="block px-4 py-2 text-sm text-center font-semibold text-[#656553]">
-                    {{ __('messages.Bienvenue') }} {{ Auth::user()->name }} !
+                    @auth
+                    {{ __('messages.Bienvenue') }}, {{ Auth::user()->name }}.
+                    @else
+                        {{ __('messages.Bienvenue') }}, {{ __('messages.Invite') }}.
+                    @endauth
+
                 </div>
                 <hr />
                 @if (Auth::user()->role_id == 1 || Auth::user()->role_id == 2)
