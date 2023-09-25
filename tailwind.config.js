@@ -11,6 +11,9 @@ module.exports = {
                 'menu-link': '#6d6d5c',
                 'pale' : '#c1c1ba',
             },
+            minHeight: {
+                '1/2': '50%',
+              },
             fontFamily: {
                 sans: ['Helvetica', 'Arial', 'sans-serif', ...defaultTheme.fontFamily.sans],
             },
