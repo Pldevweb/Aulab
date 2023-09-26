@@ -10,22 +10,22 @@
             <i class="fa-solid fa-bars"></i>
         </button>
 
-        <div x-show="open"
-            class="md:hidden fixed top-0 left-0 w-full h-screen bg-black opacity-80 z-10">
+        <div x-show="open" class="md:hidden fixed top-0 left-0 w-full h-screen bg-black opacity-80 z-10">
         </div>
 
-        <div x-show="open" @click.away="open = false" x-transition:enter="transform transition-transform ease-in-out duration-300"
-        x-transition:enter-start="-translate-x-full"
-        x-transition:enter-end="translate-x-0"
-        x-transition:leave="transform transition-transform ease-in-out duration-300"
-        x-transition:leave-start="translate-x-0"
-        x-transition:leave-end="-translate-x-full"
+        <div x-show="open" @click.away="open = false"
+            x-transition:enter="transform transition-transform ease-in-out duration-300"
+            x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
+            x-transition:leave="transform transition-transform ease-in-out duration-300"
+            x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full"
             class="md:hidden fixed top-0 left-0 w-10/12 h-screen z-10">
 
             <button @click="open = false"
                 class="absolute top-0 left-full m-1 p-1 z-10 text-white rounded hover:bg-transparent hover:text-white focus:outline-none focus:ring focus:border-transparent">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
                 </svg>
             </button>
 
@@ -44,7 +44,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url('/produits-pour-chiens') }}" class="block text-menu-link hover:bg-transparent hover:text-white">
+                    <a href="{{ url('/produits-pour-chiens') }}"
+                        class="block text-menu-link hover:bg-transparent hover:text-white">
                         {{ __('messages.Boutique') }}
                     </a>
                 </li>
@@ -95,9 +96,13 @@
         </form>
     </div>
     <div class="flex justify-end w-1/3 px-10 items-center">
-        <a href="{{ route('cart.index') }}" class="p-1 h-8 w-8 rounded-full">
+
+        <a href="{{ route('cart.index') }}" class="p-1 h-8 w-8 rounded-full flex items-center mr-3">
             <i class="fa-solid fa-cart-shopping text-button text-lg"></i>
+            {{-- component logics to calcalute total quantity in cart --}}
+            <x-total-quantity />
         </a>
+
         @guest
             @if (Route::has('login'))
                 <div x-data="{ dropdownMenu: false }" class="relative" @click.away="dropdownMenu = false">
@@ -143,7 +148,7 @@
                 class="absolute right-0 py-2 mt-2 rounded-md shadow-sm w-44 bg-card border-2 border-[#ededed]">
                 <div class="block px-4 py-2 text-sm text-center font-semibold text-[#656553]">
                     @auth
-                    {{ __('messages.Bienvenue') }}, {{ Auth::user()->name }}.
+                        {{ __('messages.Bienvenue') }}, {{ Auth::user()->name }}.
                     @else
                         {{ __('messages.Bienvenue') }}, {{ __('messages.Invite') }}.
                     @endauth
@@ -179,7 +184,8 @@
 @endguest
 </div>
 </div>
-<nav class="hidden md:w-full md:flex md:flex-wrap md:items-center md:justify-between md:mx-auto md:p-1 md:bg-[#c1c1ba]">
+<nav
+    class="hidden md:w-full md:flex md:flex-wrap md:items-center md:justify-between md:mx-auto md:p-1 md:bg-[#c1c1ba]">
     <ul
         class="mx-auto flex flex-col font-medium border-0 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 text-sm">
         <li>

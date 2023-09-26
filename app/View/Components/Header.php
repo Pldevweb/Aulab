@@ -3,8 +3,10 @@
 namespace App\View\Components;
 
 use Closure;
-use Illuminate\Contracts\View\View;
+use App\Models\Cart;
+use App\Models\CartProduct;
 use Illuminate\View\Component;
+use Illuminate\Contracts\View\View;
 
 class Header extends Component
 {
@@ -21,6 +23,8 @@ class Header extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.header');
+        $cartProducts = CartProduct::all();
+        $carts = Cart::all();
+        return view('components.header', compact('cartProducts', 'carts'));
     }
 }

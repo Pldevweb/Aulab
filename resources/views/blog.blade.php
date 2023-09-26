@@ -14,7 +14,8 @@
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             @foreach ($articles as $article)
                 <div class="bg-white rounded-lg shadow-md p-6">
-                    <img src="{{ asset('storage/' . $article->user->avatar) }}" alt="photo de profil" class="float-left w-14 h-14 mr-1 object-cover rounded-lg">
+                    <img src="{{ asset('storage/' . $article->user->avatar) }}" alt="photo de profil"
+                        class="float-left w-14 h-14 mr-1 object-cover rounded-lg">
                     <div class="font-bold text-main-color">
                         {{ $article->user->name }}
                     </div>
@@ -23,7 +24,6 @@
                             {{ $article->user->role->display_name }}
                         @endif
                     </div>
-
                     <a href="{{ route('article.show', ['id' => $article->id]) }}">
                         <div class="mt-5 group">
                             <h2 class="text-base font-semibold text-main-color group-hover:opacity-50">
@@ -38,7 +38,8 @@
 
                             </div>
                             <div class="w-72 h-72 lg:w-96 lg:h-96 max-w-full group-hover:opacity-50">
-                                <img src="{{ asset('storage/' . $article->thumbnail) }}" alt="{{ $article->title }}" class="mb-2 w-full h-full object-cover rounded-lg">
+                                <img src="{{ asset('storage/' . $article->thumbnail) }}" alt="{{ $article->title }}"
+                                    class="mb-2 w-full h-full object-cover rounded-lg">
                             </div>
                         </div>
                     </a>

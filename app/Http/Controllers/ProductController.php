@@ -48,20 +48,19 @@ class ProductController extends Controller
         return view('productDetails', compact('product', 'categorie'));
     }
     public function search(Request $request)
-    {
-        $query = $request->input('query');
+{
+    $query = $request->input('query');
+    $totalProductsCount = Product::count();
+    $categories = Categorie::all();
+    $products = Product::where('name', 'like', "%$query%")->get();
 
-        $product = Product::where('name', 'like', "%$query%")
-            ->first();
-
-        if ($product) {
-
-            return view('productDetails', compact('product'));
-        } else {
-
-            return view('noResults');
-        }
+    if ($products->isEmpty()) {
+        return view('noResults');
+    } else {
+        return view('produits-pour-chiens', compact('products', 'totalProductsCount', 'categories'));
     }
+}
+
 
 
     /**

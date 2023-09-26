@@ -13,6 +13,9 @@ module.exports = {
                 'pale' : '#c1c1ba',
                 'button': '#5e5e4a',
             },
+            minHeight: {
+                '1/2': '50%',
+              },
             fontFamily: {
                 sans: ['Helvetica', 'Arial', 'sans-serif', ...defaultTheme.fontFamily.sans],
             },
