@@ -10,6 +10,7 @@ use Laravel\Sanctum\HasApiTokens;
 use App\Models\Article;
 use App\Models\Comment;
 use App\Models\Role;
+use App\Models\Cart;
 
 class User extends \TCG\Voyager\Models\User
 {
@@ -60,4 +61,9 @@ class User extends \TCG\Voyager\Models\User
     {
         return $this->belongsTo(Role::class);
     }
+    public function cart()
+{
+    return $this->hasOne(Cart::class);
+}
+
 }

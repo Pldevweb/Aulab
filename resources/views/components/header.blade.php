@@ -96,9 +96,13 @@
         </form>
     </div>
     <div class="flex justify-end w-1/3 px-10 items-center">
-        <a href="{{ route('cart.index') }}" class="p-1 h-8 w-8 rounded-full">
+
+        <a href="{{ route('cart.index') }}" class="p-1 h-8 w-8 rounded-full flex items-center mr-3">
             <i class="fa-solid fa-cart-shopping text-button text-lg"></i>
+            {{-- component logics to calcalute total quantity in cart --}}
+            <x-total-quantity />
         </a>
+
         @guest
             @if (Route::has('login'))
                 <div x-data="{ dropdownMenu: false }" class="relative" @click.away="dropdownMenu = false">

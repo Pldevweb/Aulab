@@ -2,8 +2,13 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use App\Models\CartProduct;
+
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Blade;
+use App\View\Components\TotalQuantity;
+use Illuminate\Support\ServiceProvider;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -20,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Blade::component('package-footer', Footer::class);
-
+        Blade::component('package-header', header::class);
+        Blade::component('total-quantity', TotalQuantity::class);
     }
 }
