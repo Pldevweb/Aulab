@@ -71,6 +71,7 @@ Route::resource('cart', CartController::class);
 Route::post('/cart/update-quantity/{cartProduct}', [CartController::class, 'updateQuantity'])
 ->name('cart.update-quantity');
 
+
 Route::put('/update-cart-total/{cartId}', [CartController::class, 'updateTotalCost'])->name('update.cart.total');
 
 

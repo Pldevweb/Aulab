@@ -110,7 +110,6 @@ return view('cart', compact('cartProducts'));
         return response()->json(['success' => true]);
     }
 
-
     /**
      * Display the specified resource.
      */
