@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'Aulab'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C36A0CB457714BBD8EFFD46AAED87DB1 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C590E1A5A4064C15AE54380061FD1503 }}
           package: .
