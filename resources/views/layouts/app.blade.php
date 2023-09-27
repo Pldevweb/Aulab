@@ -7,6 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     @vite(['resources/sass/app.scss', 'resources/js/cart.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/carousel.js'])
 
 
 

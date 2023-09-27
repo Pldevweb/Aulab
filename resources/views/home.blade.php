@@ -218,6 +218,33 @@
         </div>
     </section>
     <!-- SECTION 7 -->
+    <div class="bg-white text-main-color js-carousel w-full p-5">
+        <h1 class="text-2xl text-main-color mb-4 uppercase text-center">Les plus populaires</h1>
+        <div class="w-10/12 mx-auto flex flex-col gap-2">
+          <div class="flex items-center flex-row justify-center gap-1">
+            <div class="cursor-pointer js-carousel-btn-left">
+                <i class="fa-solid fa-caret-left"></i>
+            </div>
+
+            <div class="flex flex-row max-w-full h-full overflow-x-hidden js-carousel-viewport">
+                @foreach ($products as $product)
+                <div class="w-full gap-1 flex-row p-2 items-center flex-shrink-0 flex justify-center text-center">
+                    <div class="w-40 h-40 bg-gray-300">
+                        <img src="{{ asset('storage/' . $product->image) }}" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="flex flex-col text-justify p-5">
+                        <div class="text-medium font-semibold">{{ $product->name }}</div>
+                        <div class="text-sm">{{ $product->price }} $</div>
+                    </div>
+                </div>
+              @endforeach
+            </div>
+            <div class="cursor-pointer js-carousel-btn-right">
+                <i class="fa-solid fa-caret-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     <!-- SECTION 8 -->
     <section class="bg-pattern w-full flex justify-center">
         <div class="flex flex-col lg:flex-row mx-10 my-5 lg:mx-40 lg:my-10 gap-5">

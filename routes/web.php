@@ -29,9 +29,11 @@ use App\Http\Controllers\Auth\EmailVerificationController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+// Route::get('/', function () {
+//     return view('home');
+// })->name('home');
+
+Route::get('/', [ProductController::class, 'showFavoriteProducts'])->name('home');
 
 Route::view('editprofile', 'editprofile')
 ->name('editprofile');

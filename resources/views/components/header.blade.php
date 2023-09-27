@@ -39,6 +39,40 @@
 
             <ul class="fixed top-0 bg-[#c1c1ba] w-10/12 h-screen py-20 px-10 z-10">
                 <li>
+                    @guest
+                        @if (Route::has('login'))
+                        <a href="{{ route('login') }}"
+                                    class="block text-menu-link hover:bg-transparent hover:text-white"
+                                    role="button" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ __('messages.Login') }}
+                        </a>
+                        @endif
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}"
+                                class="block text-menu-link hover:bg-transparent hover:text-white">
+                                {{ __('messages.Register') }}
+                            </a>
+                        @endif
+                    @else
+                        <a href="{{ route('editprofile') }}"
+                        class="block text-menu-link hover:bg-transparent hover:text-white" role="button"
+                        aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ __('messages.Editer_mon_profil') }}
+                        </a>
+                        <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();"
+                            class="block text-menu-link hover:bg-transparent hover:text-white">
+                            {{ __('messages.Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    @endguest
+                    <hr class="m-5"/>
+                </li>
+                <li>
                     <a href="{{ url('/') }}" class="block text-menu-link hover:bg-transparent hover:text-white">
                         {{ __('messages.Accueil') }}
                     </a>

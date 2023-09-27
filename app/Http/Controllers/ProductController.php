@@ -20,6 +20,12 @@ class ProductController extends Controller
         return view('produits-pour-chiens', compact('categories', 'products', 'totalProductsCount'));
     }
 
+    public function showFavoriteProducts()
+    {
+        $products = Product::all();
+
+        return view('home', compact('products'));
+    }
 
     public function showProductsByCategorie($slug)
     {
