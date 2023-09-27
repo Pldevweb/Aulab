@@ -29,9 +29,11 @@ use App\Http\Controllers\Auth\EmailVerificationController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+// Route::get('/', function () {
+//     return view('home');
+// })->name('home');
+
+Route::get('/', [ProductController::class, 'showFavoriteProducts'])->name('home');
 
 Route::view('editprofile', 'editprofile')
 ->name('editprofile');
@@ -68,6 +70,7 @@ Route::resource('cart', CartController::class);
 
 Route::post('/cart/update-quantity/{cartProduct}', [CartController::class, 'updateQuantity'])
 ->name('cart.update-quantity');
+
 
 Route::put('/update-cart-total/{cartId}', [CartController::class, 'updateTotalCost'])->name('update.cart.total');
 

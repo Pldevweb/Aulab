@@ -9,8 +9,13 @@ module.exports = {
                 'link': '#fff',
                 'link-hover': '#424230',
                 'menu-link': '#6d6d5c',
+                'menu-link-hover': '#9b9b76',
                 'pale' : '#c1c1ba',
+                'button': '#5e5e4a',
             },
+            minHeight: {
+                '1/2': '50%',
+              },
             fontFamily: {
                 sans: ['Helvetica', 'Arial', 'sans-serif', ...defaultTheme.fontFamily.sans],
             },
@@ -24,6 +29,9 @@ module.exports = {
                 'footer': '#cdcdc8',
                 'footer-2': '#c1c1ba',
                 'button': '#5e5e4a',
+                'button-hover': '#70705c',
+                'button-focus': 'red',
+                'button-active': '#797963',
                 'notactive': '#dbdbd8',
                 'active': '#c1c1ba',
                 'primary': '#5e5e4a',
