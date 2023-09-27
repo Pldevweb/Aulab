@@ -1,21 +1,22 @@
 <?php
 
-use App\Http\Controllers\Auth\EmailVerificationController;
-use App\Http\Controllers\Auth\LogoutController;
 use App\Models\User;
-use App\Models\Categorie;
 use App\Models\Product;
+use App\Models\Categorie;
+use TCG\Voyager\Facades\Voyager;
 use App\Http\Livewire\Auth\Login;
-use App\Http\Livewire\Auth\Passwords\Confirm;
+use App\Http\Livewire\Auth\Verify;
+use App\Http\Livewire\Auth\Register;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\AvatarController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProductController;
 use App\Http\Livewire\Auth\Passwords\Email;
 use App\Http\Livewire\Auth\Passwords\Reset;
-use App\Http\Livewire\Auth\Register;
-use App\Http\Livewire\Auth\Verify;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\AvatarController;
-use TCG\Voyager\Facades\Voyager;
+use App\Http\Livewire\Auth\Passwords\Confirm;
+use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\Auth\EmailVerificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,9 +29,11 @@ use TCG\Voyager\Facades\Voyager;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+// Route::get('/', function () {
+//     return view('home');
+// })->name('home');
+
+Route::get('/', [ProductController::class, 'showFavoriteProducts'])->name('home');
 
 Route::view('editprofile', 'editprofile')
 ->name('editprofile');
@@ -38,11 +41,18 @@ Route::view('editprofile', 'editprofile')
 Route::view('about', 'about')
 ->name('about');
 
+Route::view('partners', 'partners')
+->name('partners');
+
 Route::get('/blog', [ArticleController::class, 'index'])
 ->name('blog');
 
+Route::get('/blog/{id}', [ArticleController::class, 'show'])
+    ->name('article.show');
+
 Route::view('contact', 'contact')
 ->name('contact');
+
 
 Route::view('partners', 'partners')
 ->name('partners');
@@ -54,6 +64,14 @@ Route::get('produits-pour-chiens/{categorie}/{name}', [ProductController::class,
 
 Route::resource('produits-pour-chiens', ProductController::class);
 
+Route::get('/product-search', [ProductController::class, 'search'])->name('productSearch');
+
+Route::resource('cart', CartController::class);
+
+Route::post('/cart/update-quantity/{cartProduct}', [CartController::class, 'updateQuantity'])
+->name('cart.update-quantity');
+
+Route::put('/update-cart-total/{cartId}', [CartController::class, 'updateTotalCost'])->name('update.cart.total');
 
 
 Route::middleware('guest')->group(function () {

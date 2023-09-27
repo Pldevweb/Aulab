@@ -648,7 +648,7 @@ class DataRowsTableSeeder extends Seeder
                 'id' => 41,
                 'data_type_id' => 7,
                 'field' => 'content',
-                'type' => 'text_area',
+                'type' => 'rich_text_box',
                 'display_name' => 'Content',
                 'required' => 1,
                 'browse' => 1,
