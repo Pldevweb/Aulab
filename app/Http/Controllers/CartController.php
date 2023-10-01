@@ -20,21 +20,19 @@ class CartController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-{
-    // Assuming you have authenticated users, you can get the user
-    $user = Auth::user();
+    {
+        // Assuming you have authenticated users, you can get the user
+        $user = Auth::user();
 
-// Retrieve the user's cart with associated products
-$cart = Cart::with('cartProducts.product')->where('user_id', $user->id)->first();
+        // Retrieve the user's cart with associated products
+        $cart = Cart::with('cartProducts.product')->where('user_id', $user->id)->first();
 
-// Assuming you have loaded the cart products into $cart->cartProducts relationship
+        // Use the null coalescing operator to provide a default value of an empty collection
+        $cartProducts = $cart ? $cart->cartProducts : collect();
 
-// Pass the cart products to the view
-$cartProducts = $cart->cartProducts;
+        return view('cart', compact('cartProducts'));
+    }
 
-return view('cart', compact('cartProducts'));
-
-}
 
     /**
      * Show the form for creating a new resource.
