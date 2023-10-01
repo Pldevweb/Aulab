@@ -41,11 +41,11 @@
                 <li>
                     @guest
                         @if (Route::has('login'))
-                        <a href="{{ route('login') }}"
-                                    class="block text-menu-link hover:bg-transparent hover:text-white"
-                                    role="button" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ __('messages.Login') }}
-                        </a>
+                            <a href="{{ route('login') }}"
+                                class="block text-menu-link hover:bg-transparent hover:text-white" role="button"
+                                aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ __('messages.Login') }}
+                            </a>
                         @endif
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}"
@@ -55,8 +55,8 @@
                         @endif
                     @else
                         <a href="{{ route('editprofile') }}"
-                        class="block text-menu-link hover:bg-transparent hover:text-white" role="button"
-                        aria-haspopup="true" aria-expanded="false" v-pre>
+                            class="block text-menu-link hover:bg-transparent hover:text-white" role="button"
+                            aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ __('messages.Editer_mon_profil') }}
                         </a>
                         <a href="{{ route('logout') }}"
@@ -70,7 +70,7 @@
                             @csrf
                         </form>
                     @endguest
-                    <hr class="m-5"/>
+                    <hr class="m-5" />
                 </li>
                 <li>
                     <a href="{{ url('/') }}" class="block text-menu-link hover:bg-transparent hover:text-white">
@@ -84,7 +84,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url('/partners') }}" class="block text-menu-link hover:bg-transparent hover:text-white">
+                    <a href="{{ url('/partners') }}"
+                        class="block text-menu-link hover:bg-transparent hover:text-white">
                         {{ __('messages.Partenaire') }}
                     </a>
                 </li>
