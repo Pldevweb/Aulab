@@ -10,11 +10,6 @@
     @vite(['resources/sass/app.scss', 'resources/js/carousel.js'])
     <script src="https://js.stripe.com/v3/" defer></script>
 
-
-
-
-
-
     <title>AULAB</title>
 
     @extends('layouts.base')

@@ -51,7 +51,7 @@
     </div>
 
     <!-- SECTION 2 -->
-    <section class="mt-5 mb-5 lg:grid lg:grid-cols-[6fr,1fr] w-5/6 h-1/2 gap-4">
+    <section class="mt-16 mb-5 lg:grid lg:grid-cols-[6fr,2fr] w-5/6 h-1/2 gap-4">
         <div>
             <h1 class="text-2xl text-main-color mb-4 uppercase">{{ __('messages.Les_jouets_interactifs') }}</h1>
             <p class=" text-main-color text-justify">
@@ -71,7 +71,7 @@
             </p>
         </div>
         <div class="flex flex-col h-full justify-center items-center">
-            <img src="{{ asset('storage\images\accueilimg2.jpeg') }}" class="lg:h-96 lg:w-48 object-cover" />
+            <img src="{{ asset('storage\images\accueilimg2.jpeg') }}" class="lg:h-96 lg:w-60 object-cover" />
             <button class="border border-[#5e5e4a] w-32 hover:bg-[#e3e3d2] text-gray-800 p-3 m-2">
                 <a href="{{ route('produits-pour-chiens.index') }}" class="text-xs text-main-color">
                     {{ __('messages.Voir_les_jouets') }}
@@ -81,7 +81,7 @@
     </section>
 
     <!-- SECTION 3 -->
-    <section class="mt-5 lg:mb-5 lg:grid lg:grid-cols-[2fr,5fr] w-5/6 lg:gap-4">
+    <section class="mt-16 lg:mb-5 lg:grid lg:grid-cols-[2fr,5fr] w-5/6 lg:gap-4">
         <img src="{{ asset('storage\images\accueilimg3.png') }}"
             class="h-full object-cover drop-shadow-[-1em_1em_0px_#5e5e4a]" />
         <div class="mt-5 lg:mt-0">
@@ -111,7 +111,7 @@
     </section>
 
     <!-- SECTION 4 -->
-    <section class="mt-5 mb-5 lg:grid lg:grid-cols-[2fr,1fr] w-5/6 h-1/2 lg:gap-4">
+    <section class="mt-16 mb-5 lg:grid lg:grid-cols-[2fr,1fr] w-5/6 h-1/2 lg:gap-4">
         <div class="flex flex-col h-full justify-center items-center lg:hidden">
             <img src="{{ asset('storage\images\accueilimg4.png') }}" class="block h-3/5 object-cover mb-5" />
         </div>
@@ -143,7 +143,7 @@
     </section>
 
     <!-- SECTION 5 -->
-    <section class="mt-5 mb-5 lg:grid lg:grid-cols-[1fr,1fr] w-5/6 h-1/2 lg:gap-4">
+    <section class="mt-16 mb-5 lg:grid lg:grid-cols-[1fr,1fr] w-5/6 h-1/2 lg:gap-4">
         <div class="flex flex-col h-full justify-center items-center">
             <img src="{{ asset('storage\images\accueilimg5.jpg') }}" class="h-3/5 object-cover mb-5" />
             <button
@@ -178,8 +178,9 @@
             </button>
         </div>
     </section>
+
     <!-- SECTION 6 -->
-    <section>
+    <section class="mt-16">
         <h2 class="uppercase text-main-color text-center">
             {{ __('messages.Encore_plus') }}
         </h2>
@@ -217,9 +218,10 @@
             </div>
         </div>
     </section>
+
     <!-- SECTION 7 -->
-    <div class="bg-white text-main-color js-carousel w-full p-5">
-        <h1 class="text-2xl text-main-color mb-4 uppercase text-center">Les plus populaires</h1>
+    <div class="mt-16 bg-white text-main-color js-carousel w-full p-10">
+        <h1 class="text-2xl text-main-color mb-4 uppercase text-center">{{ __('messages.Les_produits_favoris') }}</h1>
         <div class="w-10/12 mx-auto flex flex-col gap-2">
           <div class="flex items-center flex-row justify-center gap-1">
             <div class="cursor-pointer js-carousel-btn-left">
@@ -228,23 +230,28 @@
 
             <div class="flex flex-row max-w-full h-full overflow-x-hidden js-carousel-viewport">
                 @foreach ($products as $product)
-                <div class="w-full gap-1 flex-row p-2 items-center flex-shrink-0 flex justify-center text-center">
-                    <div class="w-40 h-40 bg-gray-300">
-                        <img src="{{ asset('storage/' . $product->image) }}" class="w-full h-full object-cover" />
+                    <div class="w-full gap-1 flex-row p-2 items-center flex-shrink-0 flex justify-center text-center">
+                        <div class="w-40 h-40 bg-gray-300">
+                            <img src="{{ asset('storage/' . $product->image) }}" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="flex flex-col text-justify p-5">
+                            <div class="text-medium font-semibold">{{ $product->name }}</div>
+                            <div class="text-sm">{{ $product->price }} $</div>
+                        </div>
                     </div>
-                    <div class="flex flex-col text-justify p-5">
-                        <div class="text-medium font-semibold">{{ $product->name }}</div>
-                        <div class="text-sm">{{ $product->price }} $</div>
-                    </div>
-                </div>
-              @endforeach
+                @endforeach
             </div>
             <div class="cursor-pointer js-carousel-btn-right">
-                <i class="fa-solid fa-caret-right"></i>
+                @if ($products->where('favorite', 1)->count() > 1)
+
+                @else
+                    <i class="fa-solid fa-caret-right"></i>
+                @endif
             </div>
           </div>
         </div>
       </div>
+
     <!-- SECTION 8 -->
     <section class="bg-pattern w-full flex justify-center">
         <div class="flex flex-col lg:flex-row mx-10 my-5 lg:mx-40 lg:my-10 gap-5">

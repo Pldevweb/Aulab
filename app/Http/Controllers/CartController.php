@@ -27,8 +27,8 @@ class CartController extends Controller
 // Retrieve the user's cart with associated products
 $cart = Cart::with('cartProducts.product')->where('user_id', $user->id)->first();
 
+// Pass the cart products to the view
 $cartProducts = $cart ? $cart->cartProducts : collect();
-
 
 return view('cart', compact('cartProducts'));
 

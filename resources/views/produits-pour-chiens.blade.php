@@ -20,25 +20,32 @@
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-5">
             @isset($products)
                 @foreach ($products as $product)
+                <div>
+                    @if ($product->favorite == 1)
+                        <div class="relative top-5 right-5 h-0 flex flex-row justify-end items-center gap-2 text-xs text-main-color">
+                            <i class="fa-solid fa-star text-yellow-500 text-med"></i> Produit favori !
+                        </div>
+                    @endif
                     <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
                         <h2 class="text-xl font-semibold mb-2 text-main-color">{{ $product->name }}</h2>
-                        <p class="text-main-color line-clamp-5">
+                        <p class="text-main-color line-clamp-5 text-justify">
                             {{ $product->description }}
                         </p>
                         <p class="text-lg mt-2 text-main-color font-bold">{{ $product->price }} $</p>
                         <p class="text-sm text-main-color">Rabais {{ $product->discount }}%</p>
                         <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}"
-                            class="mt-4 mb-4 w-full h-96 object-contain">
+                            class="mt-4 mb-4 w-full h-96 object-contain"/>
                         @foreach ($product->categorie as $category)
                             <a class="p-3 inline-block w-full text-center bg-button hover:bg-[#727262] text-white"
                                 href="{{ route('productDetails', ['categorie' => $category->slug, 'name' => $product->name]) }}">Voir
                                 les détails
                             </a>
                         @break
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
-            @endforeach
-        @endisset
+                @endforeach
+            @endisset
+        </div>
     </div>
-</div>
 @endsection

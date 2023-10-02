@@ -29,18 +29,6 @@ class ArticlesTableSeeder extends Seeder
                 'updated_at' => '2023-09-21 20:18:18',
                 'user_id' => 3,
             ),
-            1 => 
-            array (
-                'id' => 7,
-                'title' => 'usahdjsad',
-                'thumbnail' => 'articles\\September2023\\3eEA0vjuGphPpdxC9jcZ.jpg',
-                'content' => '<p><strong>dfsadasdas</strong></p>
-<p><em>salut</em></p>
-<p><span style="text-decoration: underline;"><em>sadij;aoskldmasd</em></span></p>',
-                'created_at' => '2023-09-21 20:31:00',
-                'updated_at' => '2023-09-21 20:36:49',
-                'user_id' => 4,
-            ),
         ));
         
         

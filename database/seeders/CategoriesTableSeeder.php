@@ -69,9 +69,9 @@ class CategoriesTableSeeder extends Seeder
             ),
             6 => 
             array (
-                'id' => 9,
-                'name' => 'boite',
-                'slug' => 'boite',
+                'id' => 7,
+                'name' => 'Produits favori',
+                'slug' => 'produits favori',
                 'created_at' => '2023-09-07 23:37:34',
                 'updated_at' => '2023-09-07 23:37:34',
             ),

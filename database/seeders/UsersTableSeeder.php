@@ -14,16 +14,16 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('users')->delete();
-        
+
         \DB::table('users')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'role_id' => 2,
-                'name' => 'Pier-Luc',
+                'name' => 'Pier-Luc Lemay',
                 'email' => 'pierluclemay1@hotmail.com',
                 'avatar' => 'users\\September2023\\x7KutarI27swzIfifetX.jpg',
                 'email_verified_at' => NULL,
@@ -35,29 +35,11 @@ class UsersTableSeeder extends Seeder
                 'remember_token' => NULL,
                 'settings' => '{"locale":"fr"}',
                 'created_at' => '2023-09-14 15:41:13',
-                'updated_at' => '2023-09-16 16:19:57',
+                'updated_at' => '2023-10-02 18:01:24',
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
-                'role_id' => 2,
-                'name' => 'pl',
-                'email' => 'pierluclemay@hotmail.com',
-                'avatar' => 'avatars/ooGku2zEkJSRwFhy79qV2nEVgLvQFtr8JdmX7Yif.png',
-                'email_verified_at' => NULL,
-                'password' => '$2y$10$fHO6jf01a87Vway62hqVZ.1KowZTIVUiIELuX3IoJ4KHGARDDt/ra',
-                'address' => NULL,
-                'city' => NULL,
-                'zipcode' => NULL,
-                'country' => NULL,
-                'remember_token' => NULL,
-                'settings' => '{"locale":"fr"}',
-                'created_at' => '2023-09-14 19:06:41',
-                'updated_at' => '2023-09-14 21:48:50',
-            ),
-            2 => 
-            array (
-                'id' => 3,
                 'role_id' => 1,
                 'name' => 'Karine Lemay',
                 'email' => 'zarahlita@hotmail.com',
@@ -73,26 +55,26 @@ class UsersTableSeeder extends Seeder
                 'created_at' => '2023-09-14 21:41:06',
                 'updated_at' => '2023-09-16 18:45:13',
             ),
-            3 => 
+            2 =>
             array (
-                'id' => 4,
+                'id' => 3,
                 'role_id' => 2,
-                'name' => 'Danyka',
-                'email' => 'cutie@hotmail.com',
-                'avatar' => 'avatars/J2ZklzsPjHfwFB6v8ap7ogMJr128MiB15MKT02Yd.jpg',
+                'name' => 'Danyka Enair',
+                'email' => 'danyka.dev@gmail.com',
+                'avatar' => 'avatars/gwGG1heIGjuyPNUqIxCOmZ2ccsIDYuYkcrIvQEAz.jpg',
                 'email_verified_at' => NULL,
-                'password' => '$2y$10$pgQh7OQuj0DckRV1tSUSg.SH23uYaLtcIpsoF5mKcfX5ivYZaTBJO',
+                'password' => '$2y$10$Zu3DoOmg8POX1U/Shxd9je8TwRDHng7R.REglrsWOYnzabahr2l1e',
                 'address' => NULL,
                 'city' => NULL,
                 'zipcode' => NULL,
                 'country' => NULL,
-                'remember_token' => 'pk5ZMXDeCs62l9W8HKRDrCbadVCV26SKWTkrPO6Lqn59SuTJLkVIq1R4A135',
-                'settings' => NULL,
-                'created_at' => '2023-09-17 21:41:57',
-                'updated_at' => '2023-09-18 14:08:44',
+                'remember_token' => 'U2j4MQcBYswJTrYMde1TDzjQurbWR5v7LPgEm7TBywt0gY5mK5LhdVbczWLK',
+                'settings' => '{"locale":"fr"}',
+                'created_at' => '2023-10-02 17:55:51',
+                'updated_at' => '2023-10-02 18:00:20',
             ),
         ));
-        
-        
+
+
     }
 }
