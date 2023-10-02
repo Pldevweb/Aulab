@@ -9,11 +9,6 @@
     @vite(['resources/sass/app.scss', 'resources/js/cart.js'])
     @vite(['resources/sass/app.scss', 'resources/js/carousel.js'])
 
-
-
-
-
-
     <title>AULAB</title>
 
     @extends('layouts.base')

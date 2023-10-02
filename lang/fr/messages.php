@@ -125,6 +125,8 @@ return [
     'Le_destructeur_p2' => 'Les accessoires pour chien destructeurs comprennent des jouets en caoutchouc résistants, des os en cuir brut et des bâtons à mâcher. Ces jouets sont conçus pour résister aux morsures et aux griffures des chiens, tout en les occupant et en les amusant.',
     'Le_destructeur_p3' => 'En choisissant les bons accessoires pour votre chien, vous pouvez aider à satisfaire son besoin naturel de mâcher et de détruire, tout en préservant vos biens personnels et en favorisant sa santé dentaire.',
 
+    'Les_produits_favoris' => 'Les produits favoris',
+
     'Faire_un_don' => 'Faire un don',
     'Faire_un_don_p1' => 'Nous sommes fiers d\'annoncer que 1% de nos profits iront à la S.P.A. de l\'Estrie pour soutenir leur travail admirable en faveur des animaux. La S.P.A. de l\'Estrie est une organisation sans but lucratif qui s\'occupe de recueillir, soigner et trouver des foyers aimants pour les animaux abandonnés ou maltraités dans la région de l\'Estrie.',
     'Faire_un_don_p2' => 'Dans  notre entreprise, nous avons à cœur de soutenir les organisations qui œuvrent pour le bien-être des animaux, car nous savons que leur travail est essentiel pour assurer la protection et le respect des animaux.',

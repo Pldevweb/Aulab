@@ -22,7 +22,7 @@ class ProductController extends Controller
 
     public function showFavoriteProducts()
     {
-        $products = Product::all();
+        $products = Product::get()->where('favorite', 1);
 
         return view('home', compact('products'));
     }

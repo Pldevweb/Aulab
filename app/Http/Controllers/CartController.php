@@ -30,7 +30,7 @@ $cart = Cart::with('cartProducts.product')->where('user_id', $user->id)->first()
 // Assuming you have loaded the cart products into $cart->cartProducts relationship
 
 // Pass the cart products to the view
-$cartProducts = $cart->cartProducts;
+$cartProducts = $cart ? $cart->cartProducts : collect();
 
 return view('cart', compact('cartProducts'));
 

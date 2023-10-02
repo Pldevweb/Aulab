@@ -25,6 +25,11 @@
                     <p class="text-main-color">
                         {{ substr($product->description, 0, 100) }}{{ strlen($product->description) > 100 ? '...' : '' }}
                     </p>
+                    @if ($product->favorite == 1)
+                        <span class="my-2 flex flex-row justify-end items-center gap-2 text-xs text-main-color">
+                            <i class="fa-solid fa-star text-yellow-500 text-med"></i> Produit favori !
+                        </span>
+                    @endif
                     <p class="text-lg mt-2 text-main-color font-bold">{{ $product->price }} $</p>
                     <p class="text-sm text-main-color">Rabais {{ $product->discount }}%</p>
                     <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}"
@@ -35,11 +40,9 @@
                             les détails
                         </a>
                     @break
-                @endforeach
-
-
-            </div>
-        @endforeach
+                    @endforeach
+                </div>
+            @endforeach
+        </div>
     </div>
-</div>
 @endsection

@@ -14,28 +14,33 @@ class UserRolesTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('user_roles')->delete();
-        
+
         \DB::table('user_roles')->insert(array (
-            0 => 
+            0 =>
             array (
                 'user_id' => 1,
                 'role_id' => 1,
             ),
-            1 => 
+            1 =>
             array (
                 'user_id' => 1,
                 'role_id' => 2,
             ),
-            2 => 
+            2 =>
             array (
-                'user_id' => 2,
+                'user_id' => 3,
+                'role_id' => 1,
+            ),
+            3 =>
+            array (
+                'user_id' => 3,
                 'role_id' => 2,
             ),
         ));
-        
-        
+
+
     }
 }
