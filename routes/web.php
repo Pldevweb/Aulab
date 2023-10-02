@@ -14,6 +14,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProductController;
 use App\Http\Livewire\Auth\Passwords\Email;
 use App\Http\Livewire\Auth\Passwords\Reset;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Livewire\Auth\Passwords\Confirm;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\EmailVerificationController;
@@ -73,6 +74,8 @@ Route::post('/cart/update-quantity/{cartProduct}', [CartController::class, 'upda
 
 
 Route::put('/update-cart-total/{cartId}', [CartController::class, 'updateTotalCost'])->name('update.cart.total');
+
+Route::resource('checkout', CheckoutController::class);
 
 
 Route::middleware('guest')->group(function () {
