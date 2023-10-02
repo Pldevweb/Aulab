@@ -27,8 +27,6 @@ class CartController extends Controller
 // Retrieve the user's cart with associated products
 $cart = Cart::with('cartProducts.product')->where('user_id', $user->id)->first();
 
-// Assuming you have loaded the cart products into $cart->cartProducts relationship
-
 // Pass the cart products to the view
 $cartProducts = $cart ? $cart->cartProducts : collect();
 
@@ -139,6 +137,21 @@ return view('cart', compact('cartProducts'));
      */
     public function destroy(string $id)
     {
-        //
+        // Retrieve the cart product by ID and delete it
+        // Implement your logic here to ensure the user is authorized to delete this item
+
+        // Example code to delete the cart product by ID:
+        $cartProduct = CartProduct::find($id);
+
+        if ($cartProduct) {
+            // Implement authorization logic if necessary
+            // $this->authorize('delete', $cartProduct);
+
+            $cartProduct->delete();
+
+            return redirect()->back()->with('success', 'Produit supprimé du panier avec succès.');
+        } else {
+            return redirect()->back()->with('error', 'Produit introuvable dans le panier.');
+        }
     }
 }

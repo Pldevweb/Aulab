@@ -4,21 +4,23 @@
     <div class="p-4 w-full ">
         <div class="bg-white min-h-screen rounded-lg shadow-md p-6 text-center">
             <div class="container mx-auto px-4 py-8">
-
-                @if ($message = Session::get('success'))
-                    <div id="success-alert"
-                        class="bg-button hover:bg-[#727262] text-white  flex items-center rounded relative mb-4"
-                        role="alert">
-                        <strong class="font-bold flex-grow text-center text-xl">{{ $message }}</strong>
-                        <button type="button" class="close mr-2"><strong>X</strong></button>
-                    </div>
-                @endif
-
+                <div x-data="{ showAlert: @json(Session::has('success')) }">
+                    @if (Session::has('success'))
+                        <div x-show="showAlert" x-transition:leave="transition-opacity ease-in duration-3000"
+                            x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-init="setTimeout(() => showAlert = false, 6000)"
+                            class="bg-button hover:bg-[#727262] text-white flex items-center rounded relative mb-4"
+                            role="alert">
+                            <strong class="font-bold flex-grow text-center text-xl">{{ Session::get('success') }}</strong>
+                            <button @click="showAlert = false" type="button" class="close mr-2"><strong>X</strong></button>
+                        </div>
+                    @endif
+                </div>
                 <div class="flex flex-col md:flex-row md:justify-between md:items-center">
                     <h1 class="text-2xl font-bold my-4">Panier d'achat</h1>
-                    <button class="bg-button hover:bg-[#727262] text-white font-bold py-3 px-4 rounded">
+                    <a href="{{ route('checkout.index') }}"
+                        class="bg-button hover:bg-[#727262] text-white font-bold py-3 px-4 rounded">
                         Passer la commande
-                    </button>
+                    </a>
                 </div>
                 <div class="mt-8">
                     @if (count($cartProducts) > 0)
@@ -35,8 +37,8 @@
                                 <div class="mt-4 md:mt-0 md:ml-6">
                                     <h2 class="text-lg font-bold">{{ $cartProduct->product->name }}</h2>
                                     <p class="mt-2 text-gray-600">{{ $cartProduct->product->description }}</p>
+                                    </form>
                                     <div class="mt-4 flex items-center">
-                                        <span class="mr-2 text-gray-600">Quantité :</span>
                                         <div class="flex items-center">
                                             <button class="bg-gray-200 rounded-l-lg px-2 py-1 decrement-quantity"
                                                 data-id="{{ $cartProduct->id }}">-</button>
@@ -46,12 +48,18 @@
                                                     data-price="{{ $cartProduct->product->price }}"
                                                     data-id="{{ $cartProduct->id }}"data-quantity="{{ $cartProduct->quantity }}"
                                                     class="w-16 py-1 px-2 rounded border quantity-input">
-
                                             </span>
                                             <button class="bg-gray-200 rounded-r-lg px-2 py-1 increment-quantity"
                                                 data-id="{{ $cartProduct->id }}">+</button>
+                                            <form method="POST" action="{{ route('cart.destroy', $cartProduct->id) }}">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit"
+                                                    class="bg-button hover:bg-[#727262] text-white rounded ml-3 px-2 py-1">Supprimer</button>
                                         </div>
-                                        <span class="ml-auto font-bold">{{ $cartProduct->product->price }}</span>
+                                        <div class="ml-4">
+                                            <span class="ml-auto font-bold">{{ $cartProduct->product->price }}$</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
