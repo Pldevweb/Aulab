@@ -57,7 +57,7 @@
                         </a>
                     </li>
                     <li class="text-sm">
-                        <a href="">
+                        <a href="{{ route('editprofile') }}">
                             {{ __('messages.Mes_informations_personnelles') }}
                         </a>
                     </li>
@@ -73,6 +73,9 @@
                     </li>
                     <li class="text-sm">
                         <i class="fa-solid fa-envelope"></i> email@email.com
+                    </li>
+                    <li class="text-sm">
+                        <a href="https://www.facebook.com/aulabcentrecanin"><i class="fa-brands fa-square-facebook"></i> Aulab Centre Canin</a>
                     </li>
                 </ul>
                 </p>

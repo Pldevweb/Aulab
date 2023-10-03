@@ -73,7 +73,7 @@
         <div class="flex flex-col h-full justify-center items-center">
             <img src="{{ asset('storage\images\accueilimg2.jpeg') }}" class="lg:h-96 lg:w-60 object-cover" />
             <button class="border border-[#5e5e4a] w-32 hover:bg-[#e3e3d2] text-gray-800 p-3 m-2">
-                <a href="{{ route('produits-pour-chiens.index') }}" class="text-xs text-main-color">
+                <a href="{{ route('productsbycategorie', 'jouets') }}" class="text-xs text-main-color">
                     {{ __('messages.Voir_les_jouets') }}
                 </a>
             </button>
@@ -102,7 +102,7 @@
             </p>
             <div class="text-center">
                 <button class="border border-[#5e5e4a] w-32 hover:bg-[#e3e3d2] text-gray-800 p-3 m-2">
-                    <a href="{{ route('produits-pour-chiens.index') }}" class="text-xs text-main-color">
+                    <a href="{{ route('productsbycategorie', 'nourriture') }}" class="text-xs text-main-color">
                         {{ __('messages.Voir_les_friandises') }}
                     </a>
                 </button>
@@ -148,7 +148,7 @@
             <img src="{{ asset('storage\images\accueilimg5.jpg') }}" class="h-3/5 object-cover mb-5" />
             <button
                 class="hidden lg:block lg:border lg:border-[#5e5e4a] lg:w-36 lg:hover:bg-[#e3e3d2] lg:text-gray-800 lg:p-3 lg:m-10">
-                <a href="{{ route('produits-pour-chiens.index') }}" class="text-xs text-main-color">
+                <a href="{{ route('productsbycategorie', 'accessoires de sport') }}" class="text-xs text-main-color">
                     {{ __('messages.Voir_nos_equipements') }}
                 </a>
             </button>
@@ -242,11 +242,7 @@
                 @endforeach
             </div>
             <div class="cursor-pointer js-carousel-btn-right">
-                @if ($products->where('favorite', 1)->count() > 1)
-
-                @else
                     <i class="fa-solid fa-caret-right"></i>
-                @endif
             </div>
           </div>
         </div>

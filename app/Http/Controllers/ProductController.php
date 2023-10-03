@@ -22,7 +22,9 @@ class ProductController extends Controller
 
     public function showFavoriteProducts()
     {
-        $products = Product::get()->where('favorite', 1);
+        $products = Product::join('products_categories', 'products.id', '=', 'products_categories.product_id')
+        ->where('products_categories.categorie_id', 7)
+        ->get();
 
         return view('home', compact('products'));
     }

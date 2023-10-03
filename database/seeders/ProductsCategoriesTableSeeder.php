@@ -40,6 +40,13 @@ class ProductsCategoriesTableSeeder extends Seeder
                 'product_id' => 6,
                 'categorie_id' => 3,
             ),
+            3 => 
+            array (
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'product_id' => 6,
+                'categorie_id' => 7,
+            ),
         ));
         
         

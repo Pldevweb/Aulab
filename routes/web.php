@@ -62,7 +62,6 @@ Route::get('produits-pour-chiens/{categorie}', [ProductController::class, 'showP
 
 Route::get('produits-pour-chiens/{categorie}/{name}', [ProductController::class, 'showProductDetails'])->name('productDetails');
 
-
 Route::resource('produits-pour-chiens', ProductController::class);
 
 Route::get('/product-search', [ProductController::class, 'search'])->name('productSearch');
