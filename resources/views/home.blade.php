@@ -223,34 +223,34 @@
     <div class="mt-16 bg-white text-main-color js-carousel w-full p-10">
         <h1 class="text-2xl text-main-color mb-4 uppercase text-center">{{ __('messages.Les_produits_favoris') }}</h1>
         <div class="w-10/12 mx-auto flex flex-col gap-2">
-          <div class="flex items-center flex-row justify-center gap-1">
-            <div class="cursor-pointer js-carousel-btn-left">
-                <i class="fa-solid fa-caret-left"></i>
-            </div>
+            <div class="flex items-center flex-row justify-center gap-1">
+                <div class="cursor-pointer js-carousel-btn-left">
+                    <i class="fa-solid fa-caret-left"></i>
+                </div>
 
-            <div class="flex flex-row max-w-full h-full overflow-x-hidden js-carousel-viewport">
-                @foreach ($products as $product)
-                    <div class="w-full gap-1 flex-row p-2 items-center flex-shrink-0 flex justify-center text-center">
-                        <div class="w-40 h-40 bg-gray-300">
-                            <img src="{{ asset('storage/' . $product->image) }}" class="w-full h-full object-cover" />
+                <div class="flex flex-row max-w-full h-full overflow-x-hidden js-carousel-viewport">
+                    @foreach ($products as $product)
+                        <div class="w-full gap-1 flex-row p-2 items-center flex-shrink-0 flex justify-center text-center">
+                            <div class="w-40 h-40 bg-gray-300">
+                                <img src="{{ asset('storage/' . $product->image) }}"
+                                    class="w-full h-full object-cover" />
+                            </div>
+                            <div class="flex flex-col text-justify p-5">
+                                <div class="text-medium font-semibold">{{ $product->name }}</div>
+                                <div class="text-sm">{{ $product->price }} $</div>
+                            </div>
                         </div>
-                        <div class="flex flex-col text-justify p-5">
-                            <div class="text-medium font-semibold">{{ $product->name }}</div>
-                            <div class="text-sm">{{ $product->price }} $</div>
-                        </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
+                <div class="cursor-pointer js-carousel-btn-right">
+                    @if ($products->where('favorite', 1)->count() > 1)
+                    @else
+                        <i class="fa-solid fa-caret-right"></i>
+                    @endif
+                </div>
             </div>
-            <div class="cursor-pointer js-carousel-btn-right">
-                @if ($products->where('favorite', 1)->count() > 1)
-
-                @else
-                    <i class="fa-solid fa-caret-right"></i>
-                @endif
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
     <!-- SECTION 8 -->
     <section class="bg-pattern w-full flex justify-center">
@@ -259,7 +259,7 @@
                 <img src="{{ asset('storage\images\logospa.png') }}" />
 
                 <button class="border border-[#5e5e4a] w-36 hover:bg-[#e3e3d2] text-gray-800 p-3 m-10 bg-white">
-                    <a href="" class="text-xs text-main-color">
+                    <a href="https://spaestrie.qc.ca/donner/faire-un-don/" class="text-xs text-main-color">
                         {{ __('messages.Faire_un_don') }}
                     </a>
                 </button>

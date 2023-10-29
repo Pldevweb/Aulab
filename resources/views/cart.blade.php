@@ -17,10 +17,12 @@
                 </div>
                 <div class="flex flex-col md:flex-row md:justify-between md:items-center">
                     <h1 class="text-2xl font-bold my-4">Panier d'achat</h1>
-                    <a href="{{ route('checkout.index') }}"
-                        class="bg-button hover:bg-[#727262] text-white font-bold py-3 px-4 rounded">
-                        Passer la commande
-                    </a>
+                    @if (!$cartProducts->isEmpty())
+                        <a href="{{ route('checkout.index') }}"
+                            class="bg-button hover:bg-[#727262] text-white font-bold py-3 px-4 rounded">
+                            Passer la commande
+                        </a>
+                    @endif
                 </div>
                 <div class="mt-8">
                     @if (count($cartProducts) > 0)
